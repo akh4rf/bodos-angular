@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BodosLogoComponent } from 'src/app/core/bodos-logo/bodos-logo.component';
 
 @Component({
-  selector: 'app-homepage',
+  selector: 'homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })

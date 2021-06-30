@@ -1,0 +1,44 @@
+<bodos-navbar></bodos-navbar>
+
+<div id="main-video-section">
+  <div id="main-video-container">
+    <video
+      type="video/mp4"
+      id="main-video"
+      src="assets/how-bagels-are-made.mp4"
+      autoplay
+      muted
+      loop
+    ></video>
+  </div>
+  <div id="main-video-overlay">
+    <b>Bagels Done Right</b>
+    <a href="#varieties"
+      ><i
+        class="fas fa-arrow-down fa-3x"
+        style="color: white; margin-top: 20px"
+      ></i
+    ></a>
+  </div>
+</div>
+
+<div class="main-section" id="varieties">
+  <div>
+    <div>
+      <bagel-orbit [isActive]="true"></bagel-orbit>
+    </div>
+    <div style="flex-direction: column">
+      <div style="color: white; font-size: 72px; text-align: center">
+        <b>Countless</b>
+      </div>
+      <div style="color: white; font-size: 72px; text-align: center">
+        <b>Varieties</b>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-section" id="locations"></div>
+<div class="main-section" id="cville"></div>
+<div class="main-section" id="reviews"></div>
+<div class="main-section" id="social-media"></div>
+<footer></footer>

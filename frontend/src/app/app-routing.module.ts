@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './pages/homepage/homepage.component';
 
-const routes: Routes = [{ path: '', component: HomepageComponent }];
+const routes: Routes = [
+  // Go to Customer Facing Module if no slug appended
+  {
+    path: '',
+    loadChildren: () =>
+      import('./customer/customer.module').then((m) => m.CustomerModule),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

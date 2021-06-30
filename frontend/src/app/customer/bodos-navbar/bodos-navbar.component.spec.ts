@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BodosLogoComponent } from './bodos-logo.component';
+import { BodosNavbarComponent } from './bodos-navbar.component';
 
-describe('BodosLogoComponent', () => {
-  let component: BodosLogoComponent;
-  let fixture: ComponentFixture<BodosLogoComponent>;
+describe('BodosNavbarComponent', () => {
+  let component: BodosNavbarComponent;
+  let fixture: ComponentFixture<BodosNavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BodosLogoComponent ]
+      declarations: [ BodosNavbarComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BodosLogoComponent);
+    fixture = TestBed.createComponent(BodosNavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
