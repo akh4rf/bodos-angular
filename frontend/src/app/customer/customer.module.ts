@@ -7,6 +7,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { BagelOrbitComponent } from './bagel-orbit/bagel-orbit.component';
 import { BodosLogoComponent } from './bodos-logo/bodos-logo.component';
 import { BodosNavbarComponent } from './bodos-navbar/bodos-navbar.component';
+import { LocationCardComponent } from './location-card/location-card.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { BodosNavbarComponent } from './bodos-navbar/bodos-navbar.component';
     BagelOrbitComponent,
     BodosLogoComponent,
     BodosNavbarComponent,
+    LocationCardComponent,
   ],
   imports: [CommonModule, CustomerRoutingModule],
 })

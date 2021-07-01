@@ -15,7 +15,7 @@
     <b>Bagels Done Right</b>
     <a href="#varieties"
       ><i
-        class="fas fa-arrow-down fa-3x"
+        class="fas fa-arrow-circle-down fa-3x down-arrow"
         style="color: white; margin-top: 20px"
       ></i
     ></a>
@@ -24,10 +24,16 @@
 
 <div class="main-section" id="varieties">
   <div>
-    <div>
+    <div style="z-index: 3">
       <bagel-orbit [isActive]="true"></bagel-orbit>
     </div>
-    <div style="flex-direction: column">
+    <div
+      style="
+        flex-direction: column;
+        z-index: 2;
+        background-color: rgba(15, 54, 99, 0.9);
+      "
+    >
       <div style="color: white; font-size: 72px; text-align: center">
         <b>Countless</b>
       </div>
@@ -35,9 +41,35 @@
         <b>Varieties</b>
       </div>
     </div>
+    <div style="z-index: 0; display: block; overflow: hidden">
+      <img
+        style="
+          min-width: 100%;
+          min-height: 100%;
+          margin-left: 50%;
+          transform: translateX(-50%);
+        "
+        src="assets/Corner-Location-1.jpeg"
+        alt=""
+      />
+    </div>
   </div>
 </div>
-<div class="main-section" id="locations"></div>
+<div
+  class="main-section"
+  id="locations"
+  style="background-color: gray; display: grid; grid-template-rows: 120px 1fr"
+>
+  <div id="location-title">
+    <h1 style="font-size: 72px; color: white">Locations</h1>
+  </div>
+  <div>
+    <location-card
+      *ngFor="let location of LOCATIONS"
+      [locationData]="location"
+    ></location-card>
+  </div>
+</div>
 <div class="main-section" id="cville"></div>
 <div class="main-section" id="reviews"></div>
 <div class="main-section" id="social-media"></div>
