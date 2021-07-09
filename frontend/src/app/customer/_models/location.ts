@@ -5,6 +5,7 @@ export class Location {
   img!: string;
   addr1!: string;
   addr2!: string;
+  map!: string;
   phone!: string;
   hours!: Hours;
 }

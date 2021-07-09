@@ -7,6 +7,10 @@
   color: lightgray !important;
 }
 
+/******************************/
+/***** Main Video Section *****/
+/******************************/
+
 #main-video-section {
   position: relative;
   height: calc(100vh - 100px);
@@ -52,6 +56,9 @@
   text-align: center;
   width: 100%;
 }
+/*****************************/
+/***** Varieties Section *****/
+/*****************************/
 
 #varieties > div {
   width: 100%;
@@ -68,23 +75,131 @@
   align-items: center;
 }
 
+#varieties-background {
+  display: block !important;
+  overflow: hidden;
+}
+
+#varieties-background > img {
+  min-width: 100%;
+  min-height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+#varieties-overlay {
+  flex-direction: column;
+  background-color: rgba(15, 54, 99, 0.9);
+}
+
+#varieties-overlay > div {
+  color: white;
+  font-size: 72px;
+  text-align: center;
+}
+
+/*****************************/
+/***** Locations Section *****/
+/*****************************/
+
+#locations {
+  background-color: #54410a7d;
+  display: grid;
+  grid-template-rows: 120px 1fr;
+}
+
 #locations > div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-#locations > #location-title {
+#location-title {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
 }
 
-/*
+#location-cards {
+  flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 1125px) {
   #locations {
     height: auto !important;
-    flex-wrap: wrap;
+  }
+  location-card {
+    margin: 25px;
   }
 }
-*/
+
+@media only screen and (max-width: 700px) {
+  location-card {
+    margin: 25px 0;
+  }
+}
+
+/***************************/
+/***** C'ville Section *****/
+/***************************/
+
+#cville-img {
+  height: 100%;
+  float: right;
+}
+
+#cville-img-textbox {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  right: 50px;
+  top: 50px;
+  text-align: right;
+  color: white;
+}
+
+#cville-img-text {
+  font-size: 72px;
+}
+
+@media only screen and (max-width: 799px) {
+  #cville-img {
+    margin-right: -350px;
+    transform: translateX(-15%);
+  }
+  #cville-img-textbox {
+    right: 25px;
+    top: 25px;
+  }
+  #cville-img-text {
+    font-size: 64px;
+  }
+}
+
+@media only screen and (min-width: 1083px) {
+  #cville-img {
+    width: 100%;
+    height: auto !important;
+  }
+}
+
+/***************************/
+/***** Reviews Section *****/
+/***************************/
+
+#reviews {
+  background: var(--primary);
+  display: grid;
+  grid-template-rows: 120px 1fr;
+}
+
+#reviews-title {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+/********************************/
+/***** Social Media Section *****/
+/********************************/

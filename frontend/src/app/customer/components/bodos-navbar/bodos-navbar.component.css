@@ -1,0 +1,24 @@
+.navbar-wrapper {
+  height: 100px;
+  width: 100vw;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-section {
+  color: #ebebeb;
+  height: 100%;
+  text-align: center;
+  padding: 0 25px;
+}
+
+.nav-icon {
+  color: var(--secondary);
+  margin-left: 10px;
+}
+
+.nav-icon:hover {
+  color: #c75910;
+  cursor: pointer;
+}

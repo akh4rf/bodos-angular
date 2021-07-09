@@ -1,0 +1,56 @@
+.reviews-card {
+  width: calc(300px + 10vw);
+  border-radius: 5%;
+  background: white;
+  box-shadow: 0 0 20px 0 black;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.reviews-top {
+  display: flex;
+  width: 100%;
+}
+
+.reviews-img {
+  width: 25%;
+}
+
+.reviews-img > img {
+  max-width: 100%;
+  border: 5px solid black;
+}
+
+.reviews-top-right {
+  width: 100%;
+  padding: 5px;
+}
+
+.reviews-top-right > div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.stars {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0;
+  font-size: calc(16px + 0.5vw);
+}
+
+.reviewer-details {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.star-gold {
+  color: gold;
+}
+
+.reviews-bottom {
+  padding: 20px 10px;
+  font-size: calc(24px + 0.5vw);
+}

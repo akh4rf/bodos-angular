@@ -1,0 +1,21 @@
+/* Inspiration for infinite marquee: https://codepen.io/nickcil/pen/BygPMY */
+
+.reviews-marquee {
+  position: relative;
+  margin-top: 150px;
+}
+
+.reviews-marquee-inner {
+  display: flex;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50%;
+  }
+}

@@ -5,7 +5,7 @@
     <video
       type="video/mp4"
       id="main-video"
-      src="assets/how-bagels-are-made.mp4"
+      src="assets/videos/how-bagels-are-made.mp4"
       autoplay
       muted
       loop
@@ -17,60 +17,72 @@
       ><i
         class="fas fa-arrow-circle-down fa-3x down-arrow"
         style="color: white; margin-top: 20px"
-      ></i
-    ></a>
+      ></i>
+    </a>
   </div>
 </div>
 
 <div class="main-section" id="varieties">
   <div>
-    <div style="z-index: 3">
-      <bagel-orbit [isActive]="true"></bagel-orbit>
-    </div>
-    <div
-      style="
-        flex-direction: column;
-        z-index: 2;
-        background-color: rgba(15, 54, 99, 0.9);
-      "
-    >
-      <div style="color: white; font-size: 72px; text-align: center">
-        <b>Countless</b>
-      </div>
-      <div style="color: white; font-size: 72px; text-align: center">
-        <b>Varieties</b>
-      </div>
-    </div>
-    <div style="z-index: 0; display: block; overflow: hidden">
+    <div id="varieties-background">
       <img
-        style="
-          min-width: 100%;
-          min-height: 100%;
-          margin-left: 50%;
-          transform: translateX(-50%);
-        "
-        src="assets/Corner-Location-1.jpeg"
-        alt=""
+        src="assets/images/Corner-Location-1.jpeg"
+        alt="A photo of the Corner location"
       />
+    </div>
+    <div id="varieties-overlay">
+      <div>Countless</div>
+      <div>Varieties</div>
+    </div>
+    <div>
+      <bagel-orbit [isActive]="true"></bagel-orbit>
     </div>
   </div>
 </div>
-<div
-  class="main-section"
-  id="locations"
-  style="background-color: gray; display: grid; grid-template-rows: 120px 1fr"
->
+
+<div class="main-section" id="locations">
   <div id="location-title">
     <h1 style="font-size: 72px; color: white">Locations</h1>
   </div>
-  <div>
+  <div id="location-cards">
     <location-card
       *ngFor="let location of LOCATIONS"
       [locationData]="location"
     ></location-card>
   </div>
 </div>
-<div class="main-section" id="cville"></div>
-<div class="main-section" id="reviews"></div>
+
+<div class="main-section" id="cville">
+  <div style="height: 100%; width: 100%; position: relative">
+    <div
+      style="width: 100%; height: 100%; position: absolute; overflow: hidden"
+    >
+      <img id="cville-img" src="assets/images/Rotunda.png" alt="" />
+    </div>
+    <div id="cville-img-textbox">
+      <div id="cville-img-text">Serving Charlottesville since 1986</div>
+      <linked-btn
+        classes="secondary"
+        styles="font-size: 32px; border-radius: 8px; margin-top: 20px;"
+        dest="/our-story"
+      >
+        Our Story <i class="fas fa-arrow-right"></i>
+      </linked-btn>
+    </div>
+  </div>
+</div>
+
+<div class="main-section" id="reviews">
+  <div id="reviews-title">
+    <h1 style="font-size: 72px; color: white">Reviews</h1>
+  </div>
+  <div>
+    <reviews-marquee
+      [reviews_list]="REVIEWS"
+      [count]="review_card_count"
+    ></reviews-marquee>
+  </div>
+</div>
+
 <div class="main-section" id="social-media"></div>
 <footer></footer>

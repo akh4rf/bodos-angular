@@ -85,6 +85,10 @@ video {
   vertical-align: baseline;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -92,6 +96,7 @@ h4,
 h5,
 h6,
 p {
+  line-height: 1.2;
   margin: 0;
   padding: 0;
   border: 0;
@@ -113,8 +118,12 @@ section {
 }
 body {
   line-height: 1;
+  font-family: "Oswald";
+}
+*,
+::after,
+::before {
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
 }
 ol,
 ul {
@@ -141,4 +150,90 @@ table {
   --secondary: #f97323;
   --tertiary: #8e4162;
   --white: #ffffff;
+}
+
+/***** FONT STYLING *****/
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+.font-bold {
+  font-weight: 900;
+}
+
+.font-semibold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-light {
+  font-weight: 200;
+}
+
+.font-extralight {
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 900;
+  src: url("./fonts/Oswald-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 700;
+  src: url("./fonts/Oswald-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  src: url("./fonts/Oswald-Medium.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  src: url("./fonts/Oswald-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 200;
+  src: url("./fonts/Oswald-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 100;
+  src: url("./fonts/Oswald-ExtraLight.ttf") format("opentype");
 }

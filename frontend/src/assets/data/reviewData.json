@@ -1,0 +1,34 @@
+[
+  {
+    "firstName": "Austin",
+    "lastName": "Houck",
+    "img": "Austin.JPG",
+    "title": "Student",
+    "rating": 5,
+    "feedback": "It isn't Charlottesville without a trip to Bodo's!"
+  },
+  {
+    "firstName": "Ashley",
+    "lastName": "Houck",
+    "img": "Ashley.jpeg",
+    "title": "Student",
+    "rating": 5,
+    "feedback": "Bodo's is amazing!!!"
+  },
+  {
+    "firstName": "Grant",
+    "lastName": "Sweeney",
+    "img": "Grant.jpeg",
+    "title": "Student",
+    "rating": 5,
+    "feedback": "These are the best bagels ever!"
+  },
+  {
+    "firstName": "Drew",
+    "lastName": "Heilman",
+    "img": "Drew.JPG",
+    "title": "Media Wizard",
+    "rating": 5,
+    "feedback": "When I think of bagels, I think of Bodo's!"
+  }
+]

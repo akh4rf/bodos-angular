@@ -1,0 +1,23 @@
+<div
+  class="reviews-marquee"
+  style="width: calc({{ count }} *
+    (300px + 10vw + {{ review_card_spacing }}))"
+>
+  <div
+    class="reviews-marquee-inner"
+    style="animation: marquee
+                calc({{ count }}*5s)
+                linear infinite;"
+  >
+    <div *ngFor="let group of reviewGroups">
+      <div style="display: flex; align-items: center">
+        <reviews-card
+          *ngFor="let review of reviews_list"
+          [reviewData]="review"
+          style="margin-right: {{ review_card_spacing }}"
+        >
+        </reviews-card>
+      </div>
+    </div>
+  </div>
+</div>

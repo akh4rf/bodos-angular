@@ -1,0 +1,53 @@
+<div class="bodos-card">
+  <div class="bodos-card-container">
+    <div class="bodos-card-img-container">
+      <img
+        src="assets/images/location-card-images/{{ locationData.img }}"
+        alt="A photo of the {{ locationData.name }} location"
+      />
+      <div class="bodos-card-img-overlay">
+        <div>
+          <h1>{{ locationData.name }}</h1>
+        </div>
+      </div>
+      <div class="bodos-card-img-map">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="{{ locationData.map }}"
+        >
+          <i class="fas fa-map-marker-alt"></i> Click For Directions
+        </a>
+      </div>
+    </div>
+    <div class="bodos-card-content-container">
+      <div>
+        <div>
+          <h4>{{ locationData.addr1 }}</h4>
+          <h4>{{ locationData.addr2 }}</h4>
+          <a style="text-decoration: none" href="tel:{{ locationData.phone }}">
+            <h4 style="margin-top: 15px">
+              <i class="fas fa-phone" style="margin-right: 5px"></i>
+              {{ locationData.phone }}
+            </h4>
+          </a>
+        </div>
+        <h3 style="margin: 15px 0">HOURS</h3>
+        <div class="bodos-card-hours-section">
+          <div
+            class="bodos-card-hours-row"
+            *ngFor="let array of locationData.hours | keyvalue"
+          >
+            <h4 style="text-align: right">
+              {{ array.key == "MON_THRU_FRI" ? "MON-FRI" : array.key }}
+            </h4>
+            <h4>
+              {{ array.value[0] }}<span>AM</span> - {{ array.value[1]
+              }}<span>PM</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

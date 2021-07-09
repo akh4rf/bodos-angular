@@ -1,0 +1,15 @@
+<div
+  id="bagelOrbit"
+  class="orbit"
+  [ngStyle]="applyOrbit()"
+  (window:resize)="onResize()"
+>
+  <img src="{{ bagelImg }}" style="left: 25px; top: 25px" />
+  <img src="{{ bagelImg }}" style="left: 200px; top: -50px" />
+  <img src="{{ bagelImg }}" style="right: 25px; top: 25px" />
+  <img src="{{ bagelImg }}" style="right: -50px; top: 200px" />
+  <img src="{{ bagelImg }}" style="right: 25px; bottom: 25px" />
+  <img src="{{ bagelImg }}" style="left: 200px; bottom: -50px" />
+  <img src="{{ bagelImg }}" style="left: 25px; bottom: 25px" />
+  <img src="{{ bagelImg }}" style="left: -50px; top: 200px" />
+</div>

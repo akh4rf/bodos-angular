@@ -1,7 +1,0 @@
-svg:not(:root) {
-  overflow: visible;
-}
-
-:host {
-  display: inline-block;
-}
