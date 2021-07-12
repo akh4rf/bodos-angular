@@ -14,11 +14,11 @@
 
 .reviews-img {
   width: 25%;
+  border: 5px solid black;
 }
 
 .reviews-img > img {
   max-width: 100%;
-  border: 5px solid black;
 }
 
 .reviews-top-right {
@@ -38,6 +38,7 @@
   right: 0;
   top: 0;
   font-size: calc(16px + 0.5vw);
+  color: gray;
 }
 
 .reviewer-details {

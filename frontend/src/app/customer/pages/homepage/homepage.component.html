@@ -76,7 +76,9 @@
   <div id="reviews-title">
     <h1 style="font-size: 72px; color: white">Reviews</h1>
   </div>
-  <div>
+  <div
+    style="display: flex; align-items: center; transform: translateY(-100px)"
+  >
     <reviews-marquee
       [reviews_list]="REVIEWS"
       [count]="review_card_count"
@@ -84,5 +86,4 @@
   </div>
 </div>
 
-<div class="main-section" id="social-media"></div>
-<footer></footer>
+<bodos-footer></bodos-footer>

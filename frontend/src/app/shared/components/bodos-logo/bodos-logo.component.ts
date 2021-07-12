@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./bodos-logo.component.css'],
 })
 export class BodosLogoComponent implements OnInit {
-  @Input() height!: number;
-  @Input() width!: number;
+  @Input() height!: string;
+  @Input() width!: string;
   @Input() fillColor!: string;
 
   handleClick() {

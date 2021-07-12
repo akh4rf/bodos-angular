@@ -16,6 +16,7 @@
 .nav-icon {
   color: var(--secondary);
   margin-left: 10px;
+  transition: all ease 0.2s;
 }
 
 .nav-icon:hover {
