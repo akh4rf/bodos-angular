@@ -31,7 +31,7 @@
   transform: translateX(-50%);
 }
 
-@media only screen and (min-width: 1117px) {
+@media only screen and (min-aspect-ratio: 3/2) {
   #main-video {
     width: 100%;
     height: auto !important;
@@ -61,7 +61,7 @@
 /*****************************/
 
 #varieties {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #varieties > div {
@@ -156,32 +156,21 @@
   position: absolute;
   height: 300px;
   width: 400px;
-  right: 50px;
-  top: 50px;
+  right: 5vw;
+  top: 5vw;
   text-align: right;
   color: white;
 }
 
 #cville-img-text {
   font-size: calc(56px + 1.5vw);
-  text-shadow: 2px 2px black;
+  text-shadow: -2px 2px 5px black;
 }
 
-@media only screen and (max-width: 799px) {
-  #cville-img {
-    margin-right: -350px;
-    transform: translateX(-15%);
-  }
-  #cville-img-textbox {
-    right: 25px;
-    top: 25px;
-  }
-}
-
-@media only screen and (min-width: 1083px) {
+@media only screen and (min-aspect-ratio: 301/200) {
   #cville-img {
     width: 100%;
-    height: auto !important;
+    height: auto;
   }
 }
 
