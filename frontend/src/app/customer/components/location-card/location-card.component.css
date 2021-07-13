@@ -1,7 +1,7 @@
 .bodos-card {
   height: 500px;
   width: 350px;
-  border-radius: 5%;
+  border-radius: 10px;
   background: white;
   box-shadow: 0 0 20px 0 black;
   overflow: hidden;

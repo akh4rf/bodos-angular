@@ -1,6 +1,6 @@
 .reviews-card {
   width: calc(300px + 10vw);
-  border-radius: 5%;
+  border-radius: 10px;
   background: white;
   box-shadow: 0 0 20px 0 black;
   overflow: hidden;
@@ -19,6 +19,7 @@
 
 .reviews-img > img {
   max-width: 100%;
+  display: block;
 }
 
 .reviews-top-right {
