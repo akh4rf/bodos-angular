@@ -1,1 +1,16 @@
-{}
+{
+  "auth": {
+    "frontendedb0e07d": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "assets": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

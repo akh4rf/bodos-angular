@@ -10,6 +10,11 @@
       "StackName": "amplify-frontend-dev-32912",
       "StackId": "arn:aws:cloudformation:us-east-1:775998830520:stack/amplify-frontend-dev-32912/30375010-e475-11eb-ac25-0eb73f956645",
       "AmplifyAppId": "d3vclnpj637bj7"
+    },
+    "categories": {
+      "auth": {
+        "frontendedb0e07d": {}
+      }
     }
   }
 }
