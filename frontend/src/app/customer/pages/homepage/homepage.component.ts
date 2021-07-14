@@ -64,6 +64,5 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.getLocations();
     this.getReviews();
-    //this.getInstaPosts(6);
   }
 }
