@@ -3,7 +3,6 @@ import { Location } from '../../_models/location';
 import { Review } from '../../_models/review';
 
 import { HTTPRequestService } from 'src/app/shared/services/http-request.service';
-import { InstaAPIRequestService } from 'src/app/shared/services/insta-api-request.service';
 
 @Component({
   selector: 'homepage',
@@ -47,19 +46,7 @@ export class HomepageComponent implements OnInit {
       });
   }
 
-  getInstaPosts(num: number) {
-    this.instaRequest.getMediaFromUser('me').subscribe((data) => {
-      for (let i = 0; i < num; i++) {
-        this.instagram_posts.push(data.data[i]);
-      }
-      console.log(this.instagram_posts);
-    });
-  }
-
-  constructor(
-    private httpRequest: HTTPRequestService,
-    private instaRequest: InstaAPIRequestService
-  ) {}
+  constructor(private httpRequest: HTTPRequestService) {}
 
   ngOnInit(): void {
     this.getLocations();

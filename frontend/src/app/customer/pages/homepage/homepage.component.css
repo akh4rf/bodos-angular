@@ -31,7 +31,7 @@
   transform: translateX(-50%);
 }
 
-@media only screen and (min-aspect-ratio: 3/2) {
+@media only screen and (min-aspect-ratio: 77/50) {
   #main-video {
     width: 100%;
     height: auto !important;

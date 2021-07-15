@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 html,
 body,
 div,
