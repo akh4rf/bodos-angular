@@ -1,0 +1,39 @@
+[
+  {
+    "sideLength": 500,
+    "bagelSize": 100,
+    "isActive": true,
+    "bagels": [
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      },
+      {
+        "img": "assets/images/bagel.png"
+      }
+    ]
+  }
+]

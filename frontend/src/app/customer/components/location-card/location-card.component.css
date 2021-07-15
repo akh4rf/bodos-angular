@@ -1,6 +1,5 @@
 .bodos-card {
   height: 500px;
-  width: 350px;
   border-radius: 10px;
   background: white;
   box-shadow: 0 0 20px 0 black;
@@ -68,12 +67,11 @@
 }
 
 .bodos-card-content-container {
-  width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 calc(20px + 1vw);
 }
 
 .bodos-card-hours-section {

@@ -3,10 +3,6 @@
    License: none (public domain)
 */
 
-* {
-  -webkit-overflow-scrolling: touch;
-}
-
 html,
 body,
 div,
@@ -165,19 +161,19 @@ table {
 /***** FONT STYLING *****/
 
 h1 {
-  font-size: 40px;
+  font-size: calc(36px + 0.25vw);
 }
 
 h2 {
-  font-size: 36px;
+  font-size: calc(32px + 0.25vw);
 }
 
 h3 {
-  font-size: 28px;
+  font-size: calc(24px + 0.25vw);
 }
 
 h4 {
-  font-size: 24px;
+  font-size: calc(20px + 0.25vw);
 }
 
 h5 {

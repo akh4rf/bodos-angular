@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../../_models/location';
 import { Review } from '../../_models/review';
+import { BagelOrbit } from '../../_models/bagel-orbit';
 
 import { HTTPRequestService } from 'src/app/shared/services/http-request.service';
 
@@ -13,9 +14,9 @@ export class HomepageComponent implements OnInit {
   LOCATIONS: Array<Location> = [];
   REVIEWS: Array<Review> = [];
 
-  instagram_posts: any[] = [];
-
   review_card_count = 2;
+
+  OrbitData: Array<BagelOrbit> = [];
 
   /**
    * A method to retrieve the list of locations from backend
@@ -28,6 +29,21 @@ export class HomepageComponent implements OnInit {
         for (let location of locationData as Location[]) {
           this.LOCATIONS.push(JSON.parse(JSON.stringify(location)));
         }
+      });
+  }
+
+  /**
+   * A method to retrieve the bagel orbit data from backend
+   * @returns
+   */
+  getBagelOrbitData() {
+    return this.httpRequest
+      .get('assets/data/bagelOrbitData.json')
+      .subscribe((orbitData) => {
+        for (let orbit of orbitData as BagelOrbit[]) {
+          this.OrbitData.push(JSON.parse(JSON.stringify(orbit)));
+        }
+        console.log(this.OrbitData);
       });
   }
 
@@ -51,5 +67,6 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.getLocations();
     this.getReviews();
+    this.getBagelOrbitData();
   }
 }

@@ -51,8 +51,9 @@
 }
 
 #main-video-overlay > b {
+  text-shadow: -2px 2px 5px black;
   color: white;
-  font-size: 72px;
+  font-size: calc(56px + 2vw);
   text-align: center;
   width: 100%;
 }
@@ -98,7 +99,8 @@
 
 #varieties-overlay > div {
   color: white;
-  font-size: 72px;
+  text-shadow: -2px 2px 5px black;
+  font-size: calc(56px + 2vw);
   text-align: center;
 }
 
@@ -110,6 +112,7 @@
   background-color: #54410a7d;
   display: grid;
   grid-template-rows: 120px 1fr;
+  height: auto !important;
 }
 
 #locations > div {
@@ -129,9 +132,6 @@
 }
 
 @media only screen and (max-width: 1125px) {
-  #locations {
-    height: auto !important;
-  }
   location-card {
     margin: 25px;
   }
@@ -146,6 +146,10 @@
 /***************************/
 /***** C'ville Section *****/
 /***************************/
+
+#cville {
+  min-height: 350px;
+}
 
 #cville-img {
   height: 100%;

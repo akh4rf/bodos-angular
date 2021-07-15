@@ -1,9 +1,5 @@
 .orbit {
   position: relative;
-  height: 500px;
-  width: 500px;
-  /*border: 2px #4a437f dashed;
-  border-radius: 100%;*/
 }
 
 .orbit > img {

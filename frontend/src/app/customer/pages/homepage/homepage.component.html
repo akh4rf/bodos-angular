@@ -6,12 +6,6 @@
   </div>
   <div id="main-video-overlay">
     <b>Bagels Done Right</b>
-    <a href="#varieties"
-      ><i
-        class="fas fa-arrow-circle-down fa-3x down-arrow"
-        style="color: white; margin-top: 20px"
-      ></i>
-    </a>
   </div>
 </div>
 
@@ -28,7 +22,10 @@
       <div>Varieties</div>
     </div>
     <div>
-      <bagel-orbit [isActive]="true"></bagel-orbit>
+      <bagel-orbit
+        *ngFor="let orbit of OrbitData"
+        [orbitData]="orbit"
+      ></bagel-orbit>
     </div>
   </div>
 </div>
@@ -53,7 +50,7 @@
       <img id="cville-img" src="assets/images/Rotunda.png" alt="" />
     </div>
     <div id="cville-img-textbox">
-      <div id="cville-img-text">Serving Charlottesville since 1986</div>
+      <div id="cville-img-text">Serving Charlottesville since 1988</div>
       <linked-btn
         classes="secondary"
         styles="font-size: 32px; border-radius: 8px; margin-top: 20px;"
