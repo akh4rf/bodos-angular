@@ -41,7 +41,10 @@ export class HomepageComponent implements OnInit {
       .get('assets/data/bagelOrbitData.json')
       .subscribe((orbitData) => {
         for (let orbit of orbitData as BagelOrbit[]) {
-          this.OrbitData.push(JSON.parse(JSON.stringify(orbit)));
+          // Only allow one
+          if (this.OrbitData.length < 1) {
+            this.OrbitData.push(JSON.parse(JSON.stringify(orbit)));
+          }
         }
         console.log(this.OrbitData);
       });
