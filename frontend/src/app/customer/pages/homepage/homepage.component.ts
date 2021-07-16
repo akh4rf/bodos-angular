@@ -46,7 +46,6 @@ export class HomepageComponent implements OnInit {
             this.OrbitData.push(JSON.parse(JSON.stringify(orbit)));
           }
         }
-        console.log(this.OrbitData);
       });
   }
 

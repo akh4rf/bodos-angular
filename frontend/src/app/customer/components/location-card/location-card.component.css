@@ -63,7 +63,7 @@
   color: white;
   text-align: center;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: calc(16px + 0.5vw);
 }
 
 .bodos-card-content-container {
@@ -71,7 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 calc(20px + 1vw);
+  padding: calc(10px + 0.5vw) calc(20px + 1vw);
 }
 
 .bodos-card-hours-section {

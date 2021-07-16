@@ -1,6 +1,6 @@
 [
   {
-    "sideLength": 500,
+    "sideLength": 600,
     "bagelSize": 100,
     "isActive": true,
     "bagels": [
