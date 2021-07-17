@@ -2,9 +2,11 @@
   class="reviews-marquee"
   style="width: calc({{ count }} *
     (300px + 10vw + {{ review_card_spacing }}))"
+  (window:resize)="onResize()"
 >
   <div
     class="reviews-marquee-inner"
+    id="reviews-marquee-{{ id }}"
     style="animation: marquee
                 calc({{ count }}*5s)
                 linear infinite;"

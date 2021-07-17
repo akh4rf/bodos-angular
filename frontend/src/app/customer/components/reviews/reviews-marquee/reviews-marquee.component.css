@@ -7,7 +7,6 @@
 .reviews-marquee-inner {
   display: flex;
   position: absolute;
-  left: 0;
 }
 
 @keyframes marquee {

@@ -154,26 +154,27 @@ location-card {
   float: right;
 }
 
-#cville-img-textbox {
-  position: absolute;
-  height: 300px;
-  width: 400px;
-  right: 5vw;
-  top: 5vw;
-  text-align: right;
-  color: white;
-}
-
-#cville-img-text {
-  font-size: calc(56px + 1.5vw);
-  text-shadow: -2px 2px 5px black;
-}
-
 @media only screen and (min-aspect-ratio: 301/200) {
   #cville-img {
     width: 100%;
     height: auto;
   }
+}
+
+#cville-img-textbox {
+  position: absolute;
+  height: 300px;
+  right: 5vw;
+  top: 5vw;
+  text-align: right;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#cville-img-text {
+  font-size: calc(56px + 1.5vw);
+  text-shadow: -2px 2px 5px black;
 }
 
 /***************************/
@@ -183,7 +184,7 @@ location-card {
 #reviews {
   background: var(--primary);
   display: grid;
-  grid-template-rows: 120px 1fr;
+  grid-template-rows: 120px auto;
   overflow-x: hidden;
   height: 400px;
 }

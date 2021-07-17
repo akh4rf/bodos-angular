@@ -4,11 +4,6 @@
 
 .orbit > img {
   position: absolute;
-  max-width: 100px;
-}
-
-.stop-orbit {
-  animation-play-state: paused !important;
 }
 
 /* Credit for orbit animation: https://codepen.io/rss/pen/EWobGz */

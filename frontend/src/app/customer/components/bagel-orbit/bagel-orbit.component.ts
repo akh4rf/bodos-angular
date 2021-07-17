@@ -17,10 +17,10 @@ export class BagelOrbitComponent implements OnInit {
     let orbit_div: HTMLElement = document.getElementById(
       'bagelOrbit'
     ) as HTMLElement;
-    orbit_div.classList.add('stop-orbit');
+    orbit_div.classList.add('animation-paused');
     clearTimeout(this.resizeTimer);
     this.resizeTimer = setTimeout(() => {
-      orbit_div.classList.remove('stop-orbit');
+      orbit_div.classList.remove('animation-paused');
     }, 400);
   }
 

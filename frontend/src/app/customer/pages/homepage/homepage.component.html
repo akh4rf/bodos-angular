@@ -50,7 +50,11 @@
       <img id="cville-img" src="assets/images/Rotunda.png" alt="" />
     </div>
     <div id="cville-img-textbox">
-      <div id="cville-img-text">Serving Charlottesville since 1988</div>
+      <div id="cville-img-text">
+        <div>Serving</div>
+        <div>Charlottesville</div>
+        <div>since 1988</div>
+      </div>
       <linked-btn
         classes="secondary"
         styles="font-size: 32px; border-radius: 8px; margin-top: 20px;"
@@ -66,12 +70,11 @@
   <div id="reviews-title">
     <h1 style="font-size: 72px; color: white">Reviews</h1>
   </div>
-  <div
-    style="display: flex; align-items: center; transform: translateY(-100px)"
-  >
+  <div style="display: flex; align-items: center">
     <reviews-marquee
       [reviews_list]="REVIEWS"
       [count]="review_card_count"
+      [id]="1"
     ></reviews-marquee>
   </div>
 </div>

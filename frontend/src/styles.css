@@ -243,3 +243,7 @@ h6 {
   font-weight: 100;
   src: url("./fonts/Oswald-ExtraLight.ttf") format("opentype");
 }
+
+.animation-paused {
+  animation-play-state: paused !important;
+}

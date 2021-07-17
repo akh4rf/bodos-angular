@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Location } from '../../_models/location';
 import { Review } from '../../_models/review';
 import { BagelOrbit } from '../../_models/bagel-orbit';
@@ -10,7 +10,7 @@ import { HTTPRequestService } from 'src/app/shared/services/http-request.service
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent implements OnInit, AfterViewInit {
   LOCATIONS: Array<Location> = [];
   REVIEWS: Array<Review> = [];
 
@@ -64,11 +64,29 @@ export class HomepageComponent implements OnInit {
       });
   }
 
+  delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+  async positionReviews() {
+    await this.delay(500);
+    let marqueeDiv: HTMLElement = document.getElementById(
+        'reviews-marquee-1'
+      ) as HTMLElement,
+      marqueeHeight = parseFloat(window.getComputedStyle(marqueeDiv).height);
+
+    marqueeDiv.style.top = marqueeHeight / -2 + 'px';
+
+    console.log(marqueeHeight);
+  }
+
   constructor(private httpRequest: HTTPRequestService) {}
 
   ngOnInit(): void {
     this.getLocations();
     this.getReviews();
     this.getBagelOrbitData();
+  }
+
+  ngAfterViewInit(): void {
+    this.positionReviews();
   }
 }

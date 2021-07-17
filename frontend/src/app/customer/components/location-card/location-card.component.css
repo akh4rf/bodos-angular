@@ -47,6 +47,7 @@
   text-align: center;
   color: white;
   text-transform: uppercase;
+  text-shadow: -2px 2px 5px black;
 }
 
 .bodos-card-img-map {
