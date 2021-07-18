@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './bodos-logo.component.html',
   styleUrls: ['./bodos-logo.component.css'],
 })
-export class BodosLogoComponent implements OnInit {
+export class BodosLogoComponent {
   @Input() height!: string;
   @Input() width!: string;
   @Input() fillColor!: string;
@@ -16,10 +16,4 @@ export class BodosLogoComponent implements OnInit {
   }
 
   constructor(private router: Router) {}
-
-  ngOnInit(): void {
-    const video = document.getElementById('main-video') as HTMLVideoElement;
-
-    video.muted = true;
-  }
 }

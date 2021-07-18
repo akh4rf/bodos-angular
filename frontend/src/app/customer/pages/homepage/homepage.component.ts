@@ -67,15 +67,13 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
   async positionReviews() {
-    await this.delay(500);
+    await this.delay(1000);
     let marqueeDiv: HTMLElement = document.getElementById(
         'reviews-marquee-1'
       ) as HTMLElement,
       marqueeHeight = parseFloat(window.getComputedStyle(marqueeDiv).height);
 
     marqueeDiv.style.top = marqueeHeight / -2 + 'px';
-
-    console.log(marqueeHeight);
   }
 
   constructor(private httpRequest: HTTPRequestService) {}

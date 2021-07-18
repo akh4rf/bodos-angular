@@ -1,20 +1,44 @@
 <nav class="navbar-wrapper">
   <div class="navbar-section">
     <div style="display: flex; align-items: center; height: 100%">
-      <bodos-logo height="80px" width="80px" fillColor="#FFFFFF"></bodos-logo>
+      <bodos-logo
+        style="height: 100%; display: flex; align-items: center"
+        height="80%"
+        width="80%"
+        fillColor="#FFFFFF"
+      ></bodos-logo>
     </div>
   </div>
   <div class="navbar-section">
-    <div style="display: flex; align-items: center; height: 100%">
-      <linked-btn
-        classes="secondary"
-        styles="font-size: 18px; border-radius: 4px"
-        dest="/order"
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: calc(20px + 0.25vw);
+      "
+    >
+      <a
+        class="secondary"
+        style="
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+          padding: 0.25em 0.5em;
+          border-radius: 0.25em;
+          transition: color 0.15s ease-in-out,
+            background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+            box-shadow 0.15s ease-in-out;
+        "
+        routerLink="/order"
       >
         Order Now!
-      </linked-btn>
-      <div><i class="fas fa-2x fa-shopping-cart nav-icon"></i></div>
-      <div><i class="fas fa-2x fa-user-circle nav-icon"></i></div>
+      </a>
     </div>
   </div>
 </nav>

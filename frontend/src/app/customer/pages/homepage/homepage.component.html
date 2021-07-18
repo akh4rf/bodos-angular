@@ -1,11 +1,11 @@
-<bodos-navbar></bodos-navbar>
+<bodos-navbar style="height: calc(100px + 5vh)"></bodos-navbar>
 
-<div id="main-video-section">
-  <div id="main-video-container">
-    <img id="main-video" src="assets/images/bagels.png" alt="" />
+<div class="main-section" id="main-photo-section">
+  <div id="main-photo-container">
+    <img id="main-photo" src="assets/images/bagels.png" alt="" />
   </div>
-  <div id="main-video-overlay">
-    <b>Bagels Done Right</b>
+  <div id="main-photo-overlay">
+    <b>Bagels Done Right.</b>
   </div>
 </div>
 
@@ -47,21 +47,38 @@
     <div
       style="width: 100%; height: 100%; position: absolute; overflow: hidden"
     >
-      <img id="cville-img" src="assets/images/Rotunda.png" alt="" />
+      <img id="cville-bg" src="assets/images/Sky.png" alt="" />
     </div>
-    <div id="cville-img-textbox">
-      <div id="cville-img-text">
+    <img id="cville-tundy" src="assets/images/Tundy.png" alt="" />
+    <div id="cville-bg-textbox">
+      <div id="cville-bg-text">
         <div>Serving</div>
         <div>Charlottesville</div>
         <div>since 1988</div>
       </div>
-      <linked-btn
-        classes="secondary"
-        styles="font-size: 32px; border-radius: 8px; margin-top: 20px;"
-        dest="/our-story"
-      >
-        Our Story <i class="fas fa-arrow-right"></i>
-      </linked-btn>
+      <div style="margin-top: 40px">
+        <a
+          class="secondary"
+          style="
+            font-size: calc(32px + 0.25vw);
+            font-weight: 400;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            padding: 0.25em 0.5em;
+            border-radius: 0.25em;
+            transition: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+          "
+          routerLink="/our-story"
+        >
+          Our Story <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>

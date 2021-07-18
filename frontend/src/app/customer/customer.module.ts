@@ -7,7 +7,6 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { BagelOrbitComponent } from './components/bagel-orbit/bagel-orbit.component';
 import { BodosNavbarComponent } from './components/bodos-navbar/bodos-navbar.component';
 import { LocationCardComponent } from './components/location-card/location-card.component';
-import { LinkedBtnComponent } from './components/linked-btn/linked-btn.component';
 import { ReviewsCardComponent } from './components/reviews/reviews-card/reviews-card.component';
 
 import { SharedModule } from '../shared/shared.module';
@@ -21,7 +20,6 @@ import { BodosFooterComponent } from './components/bodos-footer/bodos-footer.com
     BagelOrbitComponent,
     BodosNavbarComponent,
     LocationCardComponent,
-    LinkedBtnComponent,
     ReviewsCardComponent,
     ReviewsMarqueeComponent,
     BodosFooterComponent,
