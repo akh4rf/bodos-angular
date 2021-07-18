@@ -64,27 +64,44 @@ export class HomepageComponent implements OnInit, AfterViewInit {
       });
   }
 
-  delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
-
-  async positionReviews() {
-    await this.delay(1000);
+  positionReviews() {
     let marqueeDiv: HTMLElement = document.getElementById(
         'reviews-marquee-1'
       ) as HTMLElement,
       marqueeHeight = parseFloat(window.getComputedStyle(marqueeDiv).height);
-
     marqueeDiv.style.top = marqueeHeight / -2 + 'px';
   }
+
+  /**
+   * Workaround to buy the review marquee to have time to load into DOM and reposition
+   * Credit: https://stackoverflow.com/a/47988441
+   */
+  scrollToTop() {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }
+
+  reviewsObserver: IntersectionObserver = new IntersectionObserver(
+    (entries, reviewsObserver) => {
+      this.positionReviews();
+    },
+    {}
+  );
 
   constructor(private httpRequest: HTTPRequestService) {}
 
   ngOnInit(): void {
+    this.scrollToTop();
     this.getLocations();
     this.getReviews();
     this.getBagelOrbitData();
   }
 
   ngAfterViewInit(): void {
-    this.positionReviews();
+    this.reviewsObserver.observe(
+      document.querySelector('#reviews') as HTMLElement
+    );
   }
 }

@@ -65,6 +65,7 @@
   text-align: center;
   padding-bottom: 10px;
   font-size: calc(16px + 0.5vw);
+  text-shadow: -2px 2px 5px black;
 }
 
 .bodos-card-content-container {

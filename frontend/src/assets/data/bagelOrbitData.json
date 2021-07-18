@@ -5,34 +5,44 @@
     "isActive": true,
     "bagels": [
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       },
       {
-        "img": "assets/images/bagel.png"
+        "img": "assets/images/bagel.png",
+        "alt_text": "A Plain Bagel"
       }
     ]
   }
