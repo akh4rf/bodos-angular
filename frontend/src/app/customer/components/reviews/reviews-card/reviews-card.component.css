@@ -3,7 +3,6 @@
   border-radius: 10px;
   background: white;
   box-shadow: 0 0 20px 0 black;
-  overflow: hidden;
   padding: 10px;
 }
 
@@ -30,21 +29,18 @@
 .reviews-top-right > div {
   position: relative;
   height: 100%;
-  width: 100%;
 }
 
 .stars {
   position: absolute;
   display: flex;
   right: 0;
-  top: 0;
   font-size: calc(16px + 0.5vw);
   color: gray;
 }
 
 .reviewer-details {
   position: absolute;
-  left: 0;
   bottom: 0;
 }
 

@@ -248,26 +248,35 @@ h6 {
   animation-play-state: paused !important;
 }
 
-a.primary {
+.bb-btn {
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.bb-btn.primary {
   color: #fff;
   background-color: var(--primary);
-  border-color: var(--primary);
 }
 
-a.primary:hover {
+.bb-btn.primary:hover {
   color: #fff;
   background-color: #4e6f96;
-  border-color: #4e6f96;
 }
 
-a.secondary {
+.bb-btn.secondary {
   color: #fff;
   background-color: var(--secondary);
-  border-color: var(--secondary);
 }
 
-a.secondary:hover {
+.bb-btn.secondary:hover {
   color: #fff;
   background-color: #c75910;
-  border-color: #c75910;
 }

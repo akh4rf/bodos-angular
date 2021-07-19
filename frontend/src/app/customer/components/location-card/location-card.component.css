@@ -12,17 +12,11 @@
 
 .bodos-card-container {
   height: 100%;
-  width: 100%;
   display: grid;
   grid-template-rows: 4fr 5fr;
 }
 
 .bodos-card-img-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
   position: relative;
 }
 
@@ -70,16 +64,16 @@
 
 .bodos-card-content-container {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: calc(10px + 0.5vw) calc(20px + 1vw);
 }
 
 .bodos-card-hours-section {
-  width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.bodos-card-hours-section > h3 {
+  margin: 15px 0;
 }
 
 .bodos-card-hours-section h4 {
@@ -87,7 +81,6 @@
 }
 
 .bodos-card-hours-row {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }

@@ -21,7 +21,7 @@
       <div>Countless</div>
       <div>Varieties</div>
     </div>
-    <div>
+    <div id="varieties-orbit-wrapper">
       <bagel-orbit
         *ngFor="let orbit of OrbitData"
         [orbitData]="orbit"
@@ -43,10 +43,8 @@
 </div>
 
 <div class="main-section" id="cville">
-  <div style="height: 100%; width: 100%; position: relative">
-    <div
-      style="width: 100%; height: 100%; position: absolute; overflow: hidden"
-    >
+  <div style="height: 100%; position: relative; overflow-x: hidden">
+    <div id="cville-bg-container">
       <img id="cville-bg" src="assets/images/Sky.png" alt="" />
     </div>
     <img id="cville-tundy" src="assets/images/Tundy.png" alt="" />
@@ -58,22 +56,8 @@
       </div>
       <div style="margin-top: 40px">
         <a
-          class="secondary"
-          style="
-            font-size: calc(32px + 0.25vw);
-            font-weight: 400;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-            padding: 0.25em 0.5em;
-            border-radius: 0.25em;
-            transition: color 0.15s ease-in-out,
-              background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-              box-shadow 0.15s ease-in-out;
-          "
+          class="bb-btn secondary"
+          style="font-size: calc(32px + 0.25vw)"
           routerLink="/our-story"
         >
           Our Story <i class="fas fa-arrow-right"></i>
