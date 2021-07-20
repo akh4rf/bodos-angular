@@ -1,0 +1,32 @@
+{
+  "links": [
+    {
+      "name": "Home",
+      "href": "/"
+    },
+    {
+      "name": "About",
+      "href": "/our-story"
+    },
+    {
+      "name": "Menu",
+      "href": "/menu"
+    },
+    {
+      "name": "Gift Cards",
+      "href": "/gift-cards"
+    },
+    {
+      "name": "Merch",
+      "href": "/merch"
+    },
+    {
+      "name": "Jobs",
+      "href": "/jobs"
+    },
+    {
+      "name": "Contact Us",
+      "href": "/contact-us"
+    }
+  ]
+}

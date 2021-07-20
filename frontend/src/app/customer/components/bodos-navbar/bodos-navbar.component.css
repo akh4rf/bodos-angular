@@ -7,11 +7,10 @@
   width: 100vw;
   background-color: var(--primary);
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .navbar-section {
-  color: #ebebeb;
   height: 100%;
   text-align: center;
   padding: 0 25px;
@@ -23,13 +22,143 @@
   height: 100%;
 }
 
-.nav-icon {
-  color: var(--secondary);
-  margin-left: 10px;
-  transition: all ease 0.2s;
+/***********************************/
+/********* Navbar Desktop **********/
+/***********************************/
+
+@media screen and (min-width: 1000px) {
+  .navbar-link {
+    --hue: 0;
+    --saturation: 0%;
+    --lightness: 100%;
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none;
+    color: hsl(var(--hue), var(--saturation), var(--lightness));
+    font-size: calc(24px + 0.25vw);
+  }
+
+  .nav-active > div > hr {
+    opacity: 1;
+  }
+
+  .navbar-link > div > hr {
+    width: 100%;
+  }
+
+  .nav-active hr.top {
+    animation: lower ease 0.2s forwards;
+  }
+
+  .nav-active hr.btm {
+    animation: raise ease 0.2s forwards;
+  }
+
+  .nav-active:hover hr.top {
+    animation: raise ease 0.2s forwards;
+  }
+
+  .nav-active:hover hr.btm {
+    animation: lower ease 0.2s forwards;
+  }
+
+  :not(.nav-active).navbar-link > div > hr.top {
+    animation: hide-bar ease 0.2s forwards, lower ease 0.2s forwards;
+  }
+
+  :not(.nav-active).navbar-link > div > hr.btm {
+    animation: hide-bar ease 0.2s forwards, raise ease 0.2s forwards;
+  }
+
+  :not(.nav-active).navbar-link:hover > div > hr.top {
+    animation: show-bar ease 0.2s forwards, raise ease 0.2s forwards;
+  }
+
+  :not(.nav-active).navbar-link:hover > div > hr.btm {
+    animation: show-bar ease 0.2s forwards, lower ease 0.2s forwards;
+  }
 }
 
-.nav-icon:hover {
-  color: #c75910;
-  cursor: pointer;
+/**********************************/
+/********* Navbar Mobile **********/
+/**********************************/
+
+@media screen and (max-width: 999px) {
+  .navbar-links {
+    display: none !important;
+  }
+}
+
+/*******************************/
+/********* Animations **********/
+/*******************************/
+
+/***** Bar raise animation *****/
+
+@-webkit-keyframes raise {
+  100% {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+@keyframes raise {
+  100% {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+/***** Bar lower animation *****/
+
+@-webkit-keyframes lower {
+  100% {
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+}
+@keyframes lower {
+  100% {
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+}
+
+/***** Bar visible animation *****/
+
+@keyframes show-bar {
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes show-bar {
+  100% {
+    opacity: 1;
+  }
+}
+
+/***** Bar invisible animation *****/
+
+@keyframes hide-bar {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes hide-bar {
+  100% {
+    opacity: 0;
+  }
 }

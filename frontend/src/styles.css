@@ -152,10 +152,10 @@ table {
 }
 
 :root {
-  --primary: #0f3663;
-  --secondary: #f97323;
-  --tertiary: #8e4162;
-  --white: #ffffff;
+  --primary: hsl(212, 74%, 22%);
+  --secondary: hsl(25, 95%, 55%);
+  --tertiary: hsl(334, 37%, 41%);
+  --white: hsl(0, 0%, 100%);
 }
 
 /***** FONT STYLING *****/
@@ -268,7 +268,7 @@ h6 {
 
 .bb-btn.primary:hover {
   color: #fff;
-  background-color: #4e6f96;
+  background-color: hsl(213, 32%, 45%);
 }
 
 .bb-btn.secondary {
@@ -278,5 +278,5 @@ h6 {
 
 .bb-btn.secondary:hover {
   color: #fff;
-  background-color: #c75910;
+  background-color: hsl(25, 75%, 45%);
 }

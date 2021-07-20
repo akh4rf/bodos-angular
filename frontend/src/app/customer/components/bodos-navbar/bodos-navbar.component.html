@@ -9,11 +9,27 @@
       ></bodos-logo>
     </div>
   </div>
-  <div class="navbar-section">
-    <div>
+  <div class="navbar-section" style="flex-grow: 1">
+    <div class="navbar-links">
+      <a
+        *ngFor="let link of NAVIGATION.links"
+        class="navbar-link"
+        [ngClass]="{ 'nav-active': link.isActive }"
+        routerLink="{{ link.href }}"
+      >
+        <div>
+          <hr class="top" />
+          {{ link.name }}
+          <hr class="btm" />
+        </div>
+      </a>
       <a
         class="bb-btn secondary"
-        style="font-size: calc(20px + 0.25vw); line-height: 1.5"
+        style="
+          font-size: calc(20px + 0.25vw);
+          line-height: 1.5;
+          margin-left: auto;
+        "
         routerLink="/order"
       >
         Order Now!
