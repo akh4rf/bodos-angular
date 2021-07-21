@@ -27,55 +27,47 @@
 /***********************************/
 
 @media screen and (min-width: 1000px) {
+  .menu-bars {
+    display: none;
+  }
+
   .navbar-link {
-    --hue: 0;
-    --saturation: 0%;
-    --lightness: 100%;
     display: inline-block;
     padding: 0 15px;
     text-decoration: none;
-    color: hsl(var(--hue), var(--saturation), var(--lightness));
+    color: #ffffff;
     font-size: calc(24px + 0.25vw);
   }
 
-  .nav-active > div > hr {
-    opacity: 1;
+  .navbar-link > div,
+  .navbar-link hr {
+    transition: all ease 0.2s;
   }
 
-  .navbar-link > div > hr {
+  .nav-active hr {
+    opacity: 1;
+    margin: 10px 0;
+  }
+
+  .navbar-link hr {
     width: 100%;
   }
 
-  .nav-active hr.top {
-    animation: lower ease 0.2s forwards;
+  :not(.nav-active).navbar-link hr {
+    opacity: 0;
+    margin: 5px 0;
   }
 
-  .nav-active hr.btm {
-    animation: raise ease 0.2s forwards;
+  .navbar-link:hover hr {
+    margin: 20px 0;
   }
 
-  .nav-active:hover hr.top {
-    animation: raise ease 0.2s forwards;
+  :not(.nav-active).navbar-link:hover hr {
+    opacity: 1;
   }
 
-  .nav-active:hover hr.btm {
-    animation: lower ease 0.2s forwards;
-  }
-
-  :not(.nav-active).navbar-link > div > hr.top {
-    animation: hide-bar ease 0.2s forwards, lower ease 0.2s forwards;
-  }
-
-  :not(.nav-active).navbar-link > div > hr.btm {
-    animation: hide-bar ease 0.2s forwards, raise ease 0.2s forwards;
-  }
-
-  :not(.nav-active).navbar-link:hover > div > hr.top {
-    animation: show-bar ease 0.2s forwards, raise ease 0.2s forwards;
-  }
-
-  :not(.nav-active).navbar-link:hover > div > hr.btm {
-    animation: show-bar ease 0.2s forwards, lower ease 0.2s forwards;
+  .navbar-overlay {
+    display: none;
   }
 }
 
@@ -87,78 +79,87 @@
   .navbar-links {
     display: none !important;
   }
-}
 
-/*******************************/
-/********* Animations **********/
-/*******************************/
-
-/***** Bar raise animation *****/
-
-@-webkit-keyframes raise {
-  100% {
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px);
+  .menu-bars {
+    display: block;
+    font-size: calc(50px + 0.25vw);
+    color: var(--secondary);
+    margin-left: auto;
+    transition: all ease 0.2s;
   }
-}
-@keyframes raise {
-  100% {
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px);
+
+  .navbar-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%);
+    background: var(--primary);
+    z-index: 999;
+    transition: all 0.5s;
   }
-}
 
-/***** Bar lower animation *****/
-
-@-webkit-keyframes lower {
-  100% {
-    -webkit-transform: translateY(5px);
-    -moz-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
-    transform: translateY(5px);
+  .navbar-overlay > div {
+    position: relative;
+    height: 100%;
   }
-}
-@keyframes lower {
-  100% {
-    -webkit-transform: translateY(5px);
-    -moz-transform: translateY(5px);
-    -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
-    transform: translateY(5px);
-  }
-}
 
-/***** Bar visible animation *****/
-
-@keyframes show-bar {
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes show-bar {
-  100% {
-    opacity: 1;
-  }
-}
-
-/***** Bar invisible animation *****/
-
-@keyframes hide-bar {
-  100% {
+  .menu-times {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    z-index: -1;
+    font-size: calc(60px + 0.25vw);
+    color: var(--secondary);
+    transition: all ease 0.2s;
     opacity: 0;
   }
-}
 
-@-webkit-keyframes hide-bar {
-  100% {
+  .navbar-overlay.active {
+    transform: translateY(0);
+  }
+
+  .navbar-overlay.active .menu-times {
+    z-index: inherit;
+    opacity: 1;
+  }
+
+  .menu-bars:hover,
+  .menu-times:hover {
+    color: var(--secondary--dark);
+    cursor: pointer;
+  }
+
+  .overlay-links-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .overlay-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .overlay-link {
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: calc(40px + 1vw);
     opacity: 0;
+    transition: all ease 0.2s;
+  }
+
+  .overlay-link.active {
+    opacity: 1;
+  }
+
+  .overlay-link:hover {
+    font-size: calc(72px + 1vw);
   }
 }

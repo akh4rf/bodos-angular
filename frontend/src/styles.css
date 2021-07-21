@@ -154,6 +154,7 @@ table {
 :root {
   --primary: hsl(212, 74%, 22%);
   --secondary: hsl(25, 95%, 55%);
+  --secondary--dark: hsl(25, 75%, 45%);
   --tertiary: hsl(334, 37%, 41%);
   --white: hsl(0, 0%, 100%);
 }
@@ -261,16 +262,6 @@ h6 {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.bb-btn.primary {
-  color: #fff;
-  background-color: var(--primary);
-}
-
-.bb-btn.primary:hover {
-  color: #fff;
-  background-color: hsl(213, 32%, 45%);
-}
-
 .bb-btn.secondary {
   color: #fff;
   background-color: var(--secondary);
@@ -278,5 +269,5 @@ h6 {
 
 .bb-btn.secondary:hover {
   color: #fff;
-  background-color: hsl(25, 75%, 45%);
+  background-color: var(--secondary--dark);
 }

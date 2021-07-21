@@ -5,12 +5,12 @@
       "href": "/"
     },
     {
-      "name": "About",
-      "href": "/our-story"
-    },
-    {
       "name": "Menu",
       "href": "/menu"
+    },
+    {
+      "name": "About",
+      "href": "/our-story"
     },
     {
       "name": "Gift Cards",

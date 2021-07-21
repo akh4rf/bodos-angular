@@ -1,4 +1,4 @@
-<nav class="navbar-wrapper">
+<nav (window:resize)="onResize()" class="navbar-wrapper">
   <div class="navbar-section">
     <div>
       <bodos-logo
@@ -34,6 +34,30 @@
       >
         Order Now!
       </a>
+    </div>
+    <div>
+      <i (click)="handleMenuClick('on')" class="fas fa-bars menu-bars"></i>
+    </div>
+  </div>
+  <div id="navbar-overlay" class="navbar-overlay">
+    <div>
+      <div class="overlay-links-wrapper">
+        <div>
+          <div class="overlay-links">
+            <a
+              *ngFor="let link of NAVIGATION.links"
+              class="overlay-link"
+              [ngClass]="{ 'nav-active': link.isActive }"
+              routerLink="{{ link.href }}"
+            >
+              <div>
+                {{ link.name }}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <i (click)="handleMenuClick('off')" class="fas fa-times menu-times"></i>
     </div>
   </div>
 </nav>
