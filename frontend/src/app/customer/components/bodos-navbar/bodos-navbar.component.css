@@ -41,6 +41,7 @@
 
   .navbar-link > div,
   .navbar-link hr {
+    -webkit-transition: all ease 0.2s;
     transition: all ease 0.2s;
   }
 
