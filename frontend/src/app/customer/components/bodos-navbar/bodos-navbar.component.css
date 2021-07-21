@@ -143,7 +143,7 @@
   .overlay-links {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 2.5vh;
   }
 
   .overlay-link {
@@ -162,5 +162,19 @@
 
   .overlay-link:hover {
     font-size: calc(72px + 1vw);
+  }
+}
+
+@media screen and (max-width: 999px) and (orientation: landscape) {
+  .overlay-links {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-right: 50px;
+    row-gap: 5vh;
+  }
+
+  .overlay-link {
+    flex-grow: 1;
+    min-width: 50%;
   }
 }
