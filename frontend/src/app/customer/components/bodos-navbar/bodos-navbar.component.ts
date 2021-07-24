@@ -29,24 +29,24 @@ export class BodosNavbarComponent implements OnInit {
   delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
   async handleMenuClick(toggle: string) {
-    const overlay: HTMLElement = document.getElementById(
-        'navbar-overlay'
+    const dropdown: HTMLElement = document.getElementById(
+        'navbar-dropdown'
       ) as HTMLElement,
-      overlayLinks: Element[] = Array.from(
-        document.getElementsByClassName('overlay-link')
+      dropdownLinks: Element[] = Array.from(
+        document.getElementsByClassName('dropdown-link')
       );
     switch (toggle) {
       case 'on':
-        overlay.classList.toggle('active');
+        dropdown.classList.toggle('active');
         await this.delay(100);
-        for (let link of overlayLinks) {
+        for (let link of dropdownLinks) {
           await this.delay(100);
           link.classList.toggle('active');
         }
         break;
       case 'off':
-        overlay.classList.toggle('active');
-        for (let link of overlayLinks) {
+        dropdown.classList.toggle('active');
+        for (let link of dropdownLinks) {
           link.classList.toggle('active');
         }
         break;
@@ -54,10 +54,10 @@ export class BodosNavbarComponent implements OnInit {
   }
 
   onResize() {
-    const overlay: HTMLElement = document.getElementById(
-      'navbar-overlay'
+    const dropdown: HTMLElement = document.getElementById(
+      'navbar-dropdown'
     ) as HTMLElement;
-    if (window.innerWidth > 999 && overlay.classList.contains('active')) {
+    if (window.innerWidth > 999 && dropdown.classList.contains('active')) {
       this.handleMenuClick('off');
     }
   }

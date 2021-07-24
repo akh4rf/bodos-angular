@@ -39,19 +39,29 @@
       <i (click)="handleMenuClick('on')" class="fas fa-bars menu-bars"></i>
     </div>
   </div>
-  <div id="navbar-overlay" class="navbar-overlay">
+  <div id="navbar-dropdown" class="navbar-dropdown">
     <div>
-      <div class="overlay-links-wrapper">
+      <div class="dropdown-links-wrapper">
         <div>
-          <div class="overlay-links">
+          <div class="dropdown-links">
             <a
               *ngFor="let link of NAVIGATION.links"
-              class="overlay-link"
+              class="dropdown-link"
               [ngClass]="{ 'nav-active': link.isActive }"
               routerLink="{{ link.href }}"
             >
-              <div>
-                {{ link.name }}
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <span class="triangle-right"></span>
+                <div class="dropdown-link-text">
+                  {{ link.name }}
+                </div>
+                <span class="triangle-left"></span>
               </div>
             </a>
           </div>
