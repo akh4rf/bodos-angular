@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HTTPRequestService } from 'src/app/shared/services/http-request.service';
-import { Navigation, Link } from '../../_models/navigation';
+import { Navigation } from '../../_models/navigation';
 
 @Component({
   selector: 'bodos-navbar',

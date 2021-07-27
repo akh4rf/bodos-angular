@@ -48,7 +48,6 @@
 
   .navbar-link > div,
   .navbar-link hr {
-    -webkit-transition: all ease 0.2s;
     transition: all ease 0.2s;
   }
 
@@ -131,7 +130,7 @@
     transform: translateY(-100%);
     background: var(--primary);
     z-index: 999;
-    transition: all 0.5s;
+    transition: all ease 0.5s;
   }
 
   .navbar-dropdown > div {
