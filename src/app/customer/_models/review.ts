@@ -1,7 +1,7 @@
 export class Review {
   firstName!: string;
   lastName!: string;
-  img!: string;
+  imgRef!: string;
   title!: string;
   rating!: number;
   feedback!: string;

@@ -55,7 +55,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
    */
   getReviews() {
     return this.httpRequest
-      .get('assets/data/reviewData.json')
+      .get('http://localhost/reviews/all-reviews.php')
       .subscribe((reviewData) => {
         this.review_card_count *= reviewData.length;
         for (let review of reviewData as Review[]) {
