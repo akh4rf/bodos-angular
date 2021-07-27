@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bodosangular-dev-181754-authRole",
+      "UnauthRoleArn": "arn:aws:iam::775998830520:role/amplify-bodosangular-dev-181754-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::775998830520:role/amplify-bodosangular-dev-181754-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bodosangular-dev-181754-deployment",
+      "UnauthRoleName": "amplify-bodosangular-dev-181754-unauthRole",
+      "StackName": "amplify-bodosangular-dev-181754",
+      "StackId": "arn:aws:cloudformation:us-east-1:775998830520:stack/amplify-bodosangular-dev-181754/7efc8220-ef28-11eb-ba7c-12dace8e8b83",
+      "AmplifyAppId": "dnky7jwfbnu0c"
+    }
+  }
+}
