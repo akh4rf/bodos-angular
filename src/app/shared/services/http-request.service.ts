@@ -13,7 +13,7 @@ export class HTTPRequestService {
     ) {
       return 'http://localhost:80/';
     } else {
-      return 'http://bodosbackend-env.eba-yd4cyzzv.us-east-1.elasticbeanstalk.com/';
+      return 'https://austinhouck.com/projects/bodos-php/';
     }
   }
 
