@@ -1,44 +1,80 @@
 {
-  "logo": {
-    "height": "80%",
-    "styles": "height: 100%; display: flex; align-items: center;",
-    "color": "#FFFFFF"
+  "navbar": {
+    "logo": {
+      "height": "80%",
+      "styles": "height: 100%; display: flex; align-items: center;",
+      "color": "#FFFFFF"
+    },
+    "links": [
+      {
+        "text": "Home",
+        "href": "/"
+      },
+      {
+        "text": "Menu",
+        "href": "/menu"
+      },
+      {
+        "text": "About",
+        "href": "/our-story"
+      },
+      {
+        "text": "Gift Cards",
+        "href": "/gift-cards"
+      },
+      {
+        "text": "Merch",
+        "href": "/merch"
+      },
+      {
+        "text": "Jobs",
+        "href": "/jobs"
+      },
+      {
+        "text": "Contact Us",
+        "href": "/contact-us"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Order Now!",
+        "href": "/order",
+        "colorClass": "secondary"
+      }
+    ]
   },
-  "links": [
-    {
-      "text": "Home",
-      "href": "/"
+  "footer": {
+    "logo": {
+      "height": "100%",
+      "styles": "height: 300px;",
+      "color": "#FFFFFF"
     },
-    {
-      "text": "Menu",
-      "href": "/menu"
+    "links": {
+      "left": [
+        {
+          "text": "Order Now",
+          "href": "/order"
+        },
+        {
+          "text": "Gift Cards",
+          "href": "/gift-cards"
+        },
+        {
+          "text": "Merch",
+          "href": "/merch"
+        }
+      ],
+      "right": [
+        {
+          "text": "Contact Us",
+          "href": "/contact-us"
+        },
+        {
+          "text": "Jobs",
+          "href": "/jobs"
+        }
+      ]
     },
-    {
-      "text": "About",
-      "href": "/our-story"
-    },
-    {
-      "text": "Gift Cards",
-      "href": "/gift-cards"
-    },
-    {
-      "text": "Merch",
-      "href": "/merch"
-    },
-    {
-      "text": "Jobs",
-      "href": "/jobs"
-    },
-    {
-      "text": "Contact Us",
-      "href": "/contact-us"
-    }
-  ],
-  "buttons": [
-    {
-      "text": "Order Now!",
-      "href": "/order",
-      "colorClass": "secondary"
-    }
-  ]
+    "copyright": "© Nearly Bros. Inc. 2021"
+  }
 }

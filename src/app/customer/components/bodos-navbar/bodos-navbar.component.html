@@ -1,10 +1,10 @@
-<nav (window:resize)="onResize()" class="navbar-wrapper">
+<nav (window:resize)="onResize()" class="navbar-wrapper" *ngIf="NAVIGATION">
   <div class="navbar-section navbar-left">
     <div>
       <bodos-logo
-        style="{{ NAVIGATION.logo.styles }}"
-        height="{{ NAVIGATION.logo.height }}"
-        fillColor="{{ NAVIGATION.logo.color }}"
+        [style]="NAVIGATION.logo.styles"
+        [height]="NAVIGATION.logo.height"
+        [fillColor]="NAVIGATION.logo.color"
       ></bodos-logo>
     </div>
   </div>

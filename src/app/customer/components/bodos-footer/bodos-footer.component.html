@@ -1,26 +1,39 @@
 <footer>
   <div id="footer-links-left">
     <div class="footer-link-section">
-      <a routerLink="/order">Order Now</a>
-      <a routerLink="/gift-cards">Gift Cards</a>
-      <a routerLink="/merch">Merch</a>
-      <p id="copyright-left">© Nearly Bros. Inc. 2021</p>
+      <a *ngFor="let link of NAVIGATION.links.left" [routerLink]="link.href">
+        {{ link.text }}
+      </a>
+      <div id="copyright-left">
+        <p>{{ NAVIGATION.copyright }}</p>
+        <p class="site-credit">
+          Site by
+          <span><a href="https://www.github.com/akh4rf">Austin Houck</a></span>
+        </p>
+      </div>
     </div>
   </div>
   <div id="footer-logo">
     <div style="height: 100%; align-items: center">
       <bodos-logo
-        style="height: 300px"
-        height="100%"
-        fillColor="#FFFFFF"
+        [style]="NAVIGATION.logo.styles"
+        [height]="NAVIGATION.logo.height"
+        [fillColor]="NAVIGATION.logo.color"
       ></bodos-logo>
     </div>
   </div>
   <div id="footer-links-right">
     <div class="footer-link-section">
-      <a routerLink="/contact-us">Contact Us</a>
-      <a routerLink="/jobs">Jobs</a>
-      <p id="copyright-right">© Nearly Bros. Inc. 2021</p>
+      <a *ngFor="let link of NAVIGATION.links.right" [routerLink]="link.href">
+        {{ link.text }}
+      </a>
+      <div id="copyright-right">
+        <p>{{ NAVIGATION.copyright }}</p>
+        <p class="site-credit">
+          Site by
+          <span><a href="https://www.github.com/akh4rf">Austin Houck</a></span>
+        </p>
+      </div>
     </div>
   </div>
 </footer>

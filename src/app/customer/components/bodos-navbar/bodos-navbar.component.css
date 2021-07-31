@@ -1,5 +1,8 @@
 :host {
   display: block;
+  height: calc(60px + 5vh);
+  position: absolute;
+  z-index: 5;
 }
 
 .navbar-wrapper {

@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { HTTPRequestService } from 'src/app/shared/services/http-request.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'bodos-navbar',
@@ -8,20 +6,7 @@ import { HTTPRequestService } from 'src/app/shared/services/http-request.service
   styleUrls: ['./bodos-navbar.component.css'],
 })
 export class BodosNavbarComponent implements OnInit {
-  NAVIGATION!: any;
-
-  getNavbarData() {
-    this.httpRequest
-      .get('assets/data/navigationData.json')
-      .subscribe((data) => {
-        this.NAVIGATION = data;
-        for (let link of this.NAVIGATION.links) {
-          if (this.router.url == link['href']) {
-            link['isActive'] = true;
-          }
-        }
-      });
-  }
+  @Input() NAVIGATION!: any;
 
   delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
@@ -59,12 +44,7 @@ export class BodosNavbarComponent implements OnInit {
     }
   }
 
-  constructor(
-    private httpRequest: HTTPRequestService,
-    private router: Router
-  ) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.getNavbarData();
-  }
+  ngOnInit(): void {}
 }

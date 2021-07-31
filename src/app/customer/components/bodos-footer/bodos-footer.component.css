@@ -22,12 +22,13 @@ footer > div > div {
   margin-bottom: 5px;
   transition: all ease 0.2s;
 }
-.footer-link-section > p {
+.footer-link-section p {
   color: white;
   font-size: calc(16px + 0.5vw);
 }
 
-.footer-link-section > a:hover {
+.footer-link-section > a:hover,
+.site-credit a:hover {
   color: rgba(255, 255, 255, 0.65);
 }
 
@@ -38,6 +39,15 @@ footer > div > div {
 #copyright-right {
   display: none;
   margin-top: 25px;
+}
+
+.site-credit {
+  font-size: calc(12px + 0.5vw) !important;
+  margin-top: 5px;
+}
+
+.site-credit a {
+  color: white;
 }
 
 @media (min-width: 687px) {
