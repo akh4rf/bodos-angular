@@ -12,6 +12,7 @@ import { ReviewsCardComponent } from './components/reviews/reviews-card/reviews-
 import { SharedModule } from '../shared/shared.module';
 import { ReviewsMarqueeComponent } from './components/reviews/reviews-marquee/reviews-marquee.component';
 import { BodosFooterComponent } from './components/bodos-footer/bodos-footer.component';
+import { NavbarLinkComponent } from './components/navbar-link/navbar-link.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BodosFooterComponent } from './components/bodos-footer/bodos-footer.com
     ReviewsCardComponent,
     ReviewsMarqueeComponent,
     BodosFooterComponent,
+    NavbarLinkComponent,
   ],
   imports: [CommonModule, CustomerRoutingModule, SharedModule],
 })

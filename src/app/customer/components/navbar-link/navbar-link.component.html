@@ -1,0 +1,18 @@
+<a
+  [ngClass]="{
+    'nav-active': isActive,
+    'navbar-link': type == 'navbar',
+    'dropdown-link': type == 'dropdown'
+  }"
+  [routerLink]="link"
+>
+  <div>
+    <span *ngIf="type == 'dropdown'" class="triangle-right"></span>
+    <hr *ngIf="type == 'navbar'" class="top" />
+    <div [ngClass]="{ 'dropdown-link-text': type == 'dropdown' }">
+      <ng-content></ng-content>
+    </div>
+    <hr *ngIf="type == 'navbar'" class="btm" />
+    <span *ngIf="type == 'dropdown'" class="triangle-left"></span>
+  </div>
+</a>

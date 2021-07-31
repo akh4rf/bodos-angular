@@ -1,0 +1,107 @@
+@media screen and (min-width: 1000px) {
+  /***** Navbar Links *****/
+
+  .navbar-link {
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: calc(24px + 0.25vw);
+  }
+
+  /***** Navbar Link Bars *****/
+
+  .navbar-link > div,
+  .navbar-link hr {
+    transition: all ease 0.2s;
+  }
+
+  .nav-active hr {
+    opacity: 1;
+    margin: 10px 0;
+  }
+
+  .navbar-link hr {
+    width: 100%;
+  }
+
+  :not(.nav-active).navbar-link hr {
+    opacity: 0;
+    margin: 5px 0;
+  }
+
+  .navbar-link:hover hr {
+    margin: 20px 0;
+  }
+
+  :not(.nav-active).navbar-link:hover hr {
+    opacity: 1;
+  }
+}
+
+/**********************************/
+/********* Navbar Mobile **********/
+/**********************************/
+
+@media screen and (max-width: 999px) {
+  /***** Dropdown Links *****/
+
+  .dropdown-link {
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: calc(40px + 1vw);
+    opacity: 0;
+    transition: all ease 0.2s;
+  }
+
+  .dropdown-link.active {
+    opacity: 1;
+  }
+
+  .dropdown-link > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /***** Dropdown Link Text *****/
+
+  .dropdown-link-text {
+    margin: 0 25px;
+    transition: all ease 0.3s;
+  }
+
+  .dropdown-link:hover .dropdown-link-text {
+    margin: 0 5px;
+  }
+
+  /***** Dropdown Link Triangles *****/
+
+  .dropdown-link span {
+    height: calc(16px + 0.25vw);
+    width: calc(16px + 0.25vw);
+    background: white;
+    opacity: 0;
+  }
+
+  .triangle-right {
+    clip-path: polygon(0 0, 0 100%, 87% 50%);
+  }
+
+  .triangle-left {
+    clip-path: polygon(100% 0, 100% 100%, 13% 50%);
+  }
+
+  .dropdown-link:hover span {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-aspect-ratio: 5/4) {
+  :host {
+    flex-grow: 1;
+    min-width: 50%;
+  }
+}
