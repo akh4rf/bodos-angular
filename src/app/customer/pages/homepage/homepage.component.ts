@@ -24,7 +24,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
    */
   getLocations() {
     return this.httpRequest
-      .get('assets/data/locationData.json')
+      .get(this.httpRequest.getPHPBaseURL() + 'locations/all-locations.php')
       .subscribe((locationData) => {
         for (let location of locationData as Location[]) {
           this.LOCATIONS.push(JSON.parse(JSON.stringify(location)));
