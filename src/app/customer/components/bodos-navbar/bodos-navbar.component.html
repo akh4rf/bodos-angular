@@ -2,10 +2,9 @@
   <div class="navbar-section navbar-left">
     <div>
       <bodos-logo
-        style="height: 100%; display: flex; align-items: center"
-        height="80%"
-        width="80%"
-        fillColor="#FFFFFF"
+        style="{{ NAVIGATION.logo.styles }}"
+        height="{{ NAVIGATION.logo.height }}"
+        fillColor="{{ NAVIGATION.logo.color }}"
       ></bodos-logo>
     </div>
   </div>
@@ -19,7 +18,7 @@
       >
         <div>
           <hr class="top" />
-          <div>{{ link.name }}</div>
+          <div>{{ link.text }}</div>
           <hr class="btm" />
         </div>
       </a>
@@ -28,11 +27,12 @@
   <div class="navbar-section navbar-right">
     <div class="navbar-links">
       <a
-        class="bb-btn secondary"
+        *ngFor="let button of NAVIGATION.buttons"
+        class="bb-btn {{ button.colorClass }}"
         style="font-size: calc(20px + 0.25vw); line-height: 1.5"
-        routerLink="/order"
+        routerLink="{{ button.href }}"
       >
-        Order Now!
+        {{ button.text }}
       </a>
     </div>
     <div>
@@ -50,16 +50,10 @@
               [ngClass]="{ 'nav-active': link.isActive }"
               routerLink="{{ link.href }}"
             >
-              <div
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
+              <div>
                 <span class="triangle-right"></span>
                 <div class="dropdown-link-text">
-                  {{ link.name }}
+                  {{ link.text }}
                 </div>
                 <span class="triangle-left"></span>
               </div>

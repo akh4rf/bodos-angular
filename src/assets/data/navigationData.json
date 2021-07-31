@@ -1,32 +1,44 @@
 {
+  "logo": {
+    "height": "80%",
+    "styles": "height: 100%; display: flex; align-items: center;",
+    "color": "#FFFFFF"
+  },
   "links": [
     {
-      "name": "Home",
+      "text": "Home",
       "href": "/"
     },
     {
-      "name": "Menu",
+      "text": "Menu",
       "href": "/menu"
     },
     {
-      "name": "About",
+      "text": "About",
       "href": "/our-story"
     },
     {
-      "name": "Gift Cards",
+      "text": "Gift Cards",
       "href": "/gift-cards"
     },
     {
-      "name": "Merch",
+      "text": "Merch",
       "href": "/merch"
     },
     {
-      "name": "Jobs",
+      "text": "Jobs",
       "href": "/jobs"
     },
     {
-      "name": "Contact Us",
+      "text": "Contact Us",
       "href": "/contact-us"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Order Now!",
+      "href": "/order",
+      "colorClass": "secondary"
     }
   ]
 }

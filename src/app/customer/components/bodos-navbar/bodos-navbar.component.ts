@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HTTPRequestService } from 'src/app/shared/services/http-request.service';
-import { Navigation } from '../../_models/navigation';
 
 @Component({
   selector: 'bodos-navbar',
@@ -9,19 +8,17 @@ import { Navigation } from '../../_models/navigation';
   styleUrls: ['./bodos-navbar.component.css'],
 })
 export class BodosNavbarComponent implements OnInit {
-  NAVIGATION: Navigation = {
-    links: [],
-  };
+  NAVIGATION!: any;
 
-  getLinks() {
+  getNavbarData() {
     this.httpRequest
       .get('assets/data/navigationData.json')
       .subscribe((data) => {
-        for (let link of data.links) {
+        this.NAVIGATION = data;
+        for (let link of this.NAVIGATION.links) {
           if (this.router.url == link['href']) {
             link['isActive'] = true;
           }
-          this.NAVIGATION.links.push(JSON.parse(JSON.stringify(link)));
         }
       });
   }
@@ -68,6 +65,6 @@ export class BodosNavbarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getLinks();
+    this.getNavbarData();
   }
 }
