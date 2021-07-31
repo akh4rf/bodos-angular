@@ -7,8 +7,5 @@ class OrbitingBagel extends Bagel {
 }
 
 export class BagelOrbit {
-  sideLength!: number;
-  bagelSize!: number;
-  isActive!: boolean;
   bagels!: Array<OrbitingBagel>;
 }

@@ -1,8 +1,8 @@
 <div
   id="bagelOrbit"
   class="orbit"
-  style="height: {{ orbitData.sideLength }}px;
-        width: {{ orbitData.sideLength }}px;"
+  style="height: {{ sideLength }}px;
+        width: {{ sideLength }}px;"
   [ngStyle]="applyOrbit()"
   (window:resize)="onResize()"
 >
@@ -11,7 +11,7 @@
     src="{{ bagel.img }}"
     style="left: {{ bagel.x_coord }}px; top: {{
       bagel.y_coord
-    }}px; max-width: {{ orbitData.bagelSize }}px;"
+    }}px; max-width: {{ bagelSize }}px;"
     alt="{{ bagel.alt_text }}"
   />
 </div>

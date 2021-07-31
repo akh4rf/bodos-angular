@@ -24,8 +24,10 @@
     </div>
     <div id="varieties-orbit-wrapper">
       <bagel-orbit
-        *ngFor="let orbit of OrbitData"
-        [orbitData]="orbit"
+        [orbitData]="OrbitData"
+        [isActive]="true"
+        [bagelSize]="100"
+        [sideLength]="600"
       ></bagel-orbit>
     </div>
   </div>

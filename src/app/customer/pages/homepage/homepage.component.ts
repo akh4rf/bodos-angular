@@ -16,7 +16,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
 
   review_card_count = 2;
 
-  OrbitData: Array<BagelOrbit> = [];
+  OrbitData!: BagelOrbit;
 
   /**
    * A method to retrieve the list of locations from backend
@@ -40,12 +40,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
     return this.httpRequest
       .get('assets/data/bagelOrbitData.json')
       .subscribe((orbitData) => {
-        for (let orbit of orbitData as BagelOrbit[]) {
-          // Only allow one
-          if (this.OrbitData.length < 1) {
-            this.OrbitData.push(JSON.parse(JSON.stringify(orbit)));
-          }
-        }
+        this.OrbitData = JSON.parse(JSON.stringify(orbitData));
       });
   }
 
