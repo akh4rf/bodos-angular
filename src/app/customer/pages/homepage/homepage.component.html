@@ -19,7 +19,7 @@
       <div>Countless</div>
       <div>Varieties</div>
     </div>
-    <div id="varieties-orbit-wrapper">
+    <div *ngIf="OrbitData" id="varieties-orbit-wrapper">
       <bagel-orbit
         [orbitData]="OrbitData"
         [isActive]="true"

@@ -39,8 +39,8 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   getBagelOrbitData() {
     return this.httpRequest
       .get('assets/data/bagelOrbitData.json')
-      .subscribe((orbitData) => {
-        this.OrbitData = JSON.parse(JSON.stringify(orbitData));
+      .subscribe((orbitData: BagelOrbit) => {
+        this.OrbitData = orbitData;
       });
   }
 

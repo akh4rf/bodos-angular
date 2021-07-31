@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BagelOrbit } from '../../_models/bagel-orbit';
 
 @Component({
@@ -6,7 +6,7 @@ import { BagelOrbit } from '../../_models/bagel-orbit';
   templateUrl: './bagel-orbit.component.html',
   styleUrls: ['./bagel-orbit.component.css'],
 })
-export class BagelOrbitComponent implements OnInit, AfterViewInit {
+export class BagelOrbitComponent implements OnInit {
   @Input() orbitData!: BagelOrbit;
   @Input() sideLength!: any;
   @Input() bagelSize!: any;
@@ -30,14 +30,12 @@ export class BagelOrbitComponent implements OnInit, AfterViewInit {
   /* Credit for orbit animation: https://codepen.io/rss/pen/EWobGz */
 
   applyOrbit() {
-    if (this.isActive) {
-      return {
-        '-webkit-animation': 'spin-right 60s linear infinite',
-        animation: 'spin-right 60s linear infinite',
-      };
-    } else {
-      return {};
-    }
+    return this.isActive
+      ? {
+          '-webkit-animation': 'spin-right 60s linear infinite',
+          animation: 'spin-right 60s linear infinite',
+        }
+      : {};
   }
 
   /**
@@ -65,9 +63,7 @@ export class BagelOrbitComponent implements OnInit, AfterViewInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
-
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.createOrbit();
   }
 }
