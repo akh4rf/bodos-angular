@@ -8,6 +8,8 @@ import { Location } from '../../_models/location';
 })
 export class LocationCardComponent implements OnInit {
   @Input() locationData!: Location;
+  FOLDER_ROOT =
+    'https://bodos-assets.s3.amazonaws.com/images/location-card-images/';
 
   constructor() {}
 

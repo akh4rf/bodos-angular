@@ -1,43 +1,43 @@
 {
   "bagels": [
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "assets/images/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
       "alt_text": "A Plain Bagel"
     }
   ]

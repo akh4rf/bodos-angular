@@ -18,6 +18,8 @@ export class HomepageComponent implements OnInit, AfterViewInit {
 
   OrbitData!: BagelOrbit;
 
+  FOLDER_ROOT = 'https://bodos-assets.s3.amazonaws.com/images/';
+
   /**
    * A method to retrieve the list of locations from backend
    * @returns

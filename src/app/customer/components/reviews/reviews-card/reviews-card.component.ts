@@ -8,6 +8,8 @@ import { Review } from '../../../_models/review';
 })
 export class ReviewsCardComponent implements OnInit, AfterViewInit {
   @Input() reviewData!: Review;
+  FOLDER_ROOT =
+    'https://bodos-assets.s3.amazonaws.com/images/review-card-images/';
 
   constructor() {}
 
