@@ -1,7 +1,11 @@
 <footer>
   <div id="footer-links-left">
     <div class="footer-link-section">
-      <a *ngFor="let link of NAVIGATION.links.left" [routerLink]="link.href">
+      <a
+        *ngFor="let link of NAVIGATION.links.left"
+        [routerLink]="link.href"
+        (click)="handleLinkClick(link.href)"
+      >
         {{ link.text }}
       </a>
       <div id="copyright-left">
@@ -19,12 +23,17 @@
         [style]="NAVIGATION.logo.styles"
         [height]="NAVIGATION.logo.height"
         [fillColor]="NAVIGATION.logo.color"
+        (click)="handleLinkClick('/')"
       ></bodos-logo>
     </div>
   </div>
   <div id="footer-links-right">
     <div class="footer-link-section">
-      <a *ngFor="let link of NAVIGATION.links.right" [routerLink]="link.href">
+      <a
+        *ngFor="let link of NAVIGATION.links.right"
+        [routerLink]="link.href"
+        (click)="handleLinkClick(link.href)"
+      >
         {{ link.text }}
       </a>
       <div id="copyright-right">

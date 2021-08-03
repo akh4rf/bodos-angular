@@ -1,5 +1,13 @@
-<bodos-navbar *ngIf="NavData" [NAVIGATION]="NavData.navbar"></bodos-navbar>
+<bodos-navbar
+  *ngIf="NavData"
+  [NAVIGATION]="NavData.navbar"
+  [ngStyle]="getNavStyle()"
+></bodos-navbar>
 
 <router-outlet></router-outlet>
 
-<bodos-footer *ngIf="NavData" [NAVIGATION]="NavData.footer"></bodos-footer>
+<bodos-footer
+  *ngIf="NavData"
+  [NAVIGATION]="NavData.footer"
+  (updateNav)="handleFooterEmit($event)"
+></bodos-footer>

@@ -5,6 +5,7 @@
         [style]="NAVIGATION.logo.styles"
         [height]="NAVIGATION.logo.height"
         [fillColor]="NAVIGATION.logo.color"
+        (click)="handleLinkClick()"
       ></bodos-logo>
     </div>
   </div>
@@ -15,6 +16,7 @@
         [link]="link.href"
         [isActive]="link.isActive"
         type="navbar"
+        (click)="handleLinkClick()"
       >
         {{ link.text }}
       </navbar-link>
@@ -27,6 +29,7 @@
         class="bb-btn {{ button.colorClass }}"
         style="font-size: calc(20px + 0.25vw); line-height: 1.5"
         routerLink="{{ button.href }}"
+        (click)="handleLinkClick()"
       >
         {{ button.text }}
       </a>
@@ -45,6 +48,7 @@
               [link]="link.href"
               [isActive]="link.isActive"
               type="dropdown"
+              (click)="handleLinkClick()"
             >
               {{ link.text }}
             </navbar-link>

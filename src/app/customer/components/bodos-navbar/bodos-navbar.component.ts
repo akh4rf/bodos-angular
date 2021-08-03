@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { resetNavLinks } from '../../customer.component';
 
 @Component({
   selector: 'bodos-navbar',
@@ -44,7 +46,29 @@ export class BodosNavbarComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  collapseDropdown() {
+    const dropdown: HTMLElement = document.getElementById(
+        'navbar-dropdown'
+      ) as HTMLElement,
+      dropdownLinks: Element[] = Array.from(
+        document.getElementsByClassName('dropdown-link')
+      );
+    // Hide dropdown container
+    dropdown.classList.remove('active');
+    // Hide dropdown links
+    for (let link of dropdownLinks) {
+      link.classList.remove('active');
+    }
+  }
+
+  handleLinkClick() {
+    // Reset active link
+    resetNavLinks(this.NAVIGATION.links, this.router.url);
+    // Collapse dropdown
+    this.collapseDropdown();
+  }
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 }

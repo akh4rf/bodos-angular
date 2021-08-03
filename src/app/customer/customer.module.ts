@@ -14,6 +14,11 @@ import { ReviewsMarqueeComponent } from './components/reviews/reviews-marquee/re
 import { BodosFooterComponent } from './components/bodos-footer/bodos-footer.component';
 import { NavbarLinkComponent } from './components/navbar-link/navbar-link.component';
 import { OurStoryPageComponent } from './pages/our-story-page/our-story-page.component';
+import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
+import { MenuPageComponent } from './pages/menu-page/menu-page.component';
+import { GiftCardsPageComponent } from './pages/gift-cards-page/gift-cards-page.component';
+import { MerchPageComponent } from './pages/merch-page/merch-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,11 @@ import { OurStoryPageComponent } from './pages/our-story-page/our-story-page.com
     BodosFooterComponent,
     NavbarLinkComponent,
     OurStoryPageComponent,
+    JobsPageComponent,
+    MenuPageComponent,
+    GiftCardsPageComponent,
+    MerchPageComponent,
+    ContactPageComponent,
   ],
   imports: [CommonModule, CustomerRoutingModule, SharedModule],
 })
