@@ -6,11 +6,11 @@ import { BagelOrbit } from '../../_models/bagel-orbit';
 import { HTTPRequestService } from 'src/app/shared/services/http-request.service';
 
 @Component({
-  selector: 'homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css'],
+  selector: 'home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css'],
 })
-export class HomepageComponent implements OnInit, AfterViewInit {
+export class HomePageComponent implements OnInit, AfterViewInit {
   LOCATIONS: Array<Location> = [];
   REVIEWS: Array<Review> = [];
 
