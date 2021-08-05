@@ -1,0 +1,13 @@
+.jobs-page {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  height: 500px;
+}
+
+.jobs-location-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

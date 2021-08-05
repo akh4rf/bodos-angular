@@ -35,6 +35,15 @@ export class CustomerComponent implements OnInit {
     }
   }
 
+  getFooterStyle() {
+    switch (this.router.url) {
+      case '/':
+        return {};
+      default:
+        return { marginTop: 'auto' };
+    }
+  }
+
   constructor(
     private httpRequest: HTTPRequestService,
     private router: Router
@@ -42,6 +51,17 @@ export class CustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNavigationData();
+    let container = document.querySelector('app-customer') as HTMLElement;
+    switch (this.router.url) {
+      case '/':
+        container.style.display = 'block';
+        break;
+      default:
+        container.style.display = 'flex';
+        container.style.minHeight = '100vh';
+        container.style.flexDirection = 'column';
+        break;
+    }
   }
 }
 
