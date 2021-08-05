@@ -271,3 +271,7 @@ h6 {
   color: #fff;
   background-color: var(--secondary--dark);
 }
+
+router-outlet {
+  display: none;
+}

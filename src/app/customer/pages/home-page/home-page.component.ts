@@ -11,15 +11,9 @@ import { HTTPRequestService } from 'src/app/shared/services/http-request.service
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
-  LOCATIONS: Array<Location> = [];
-  REVIEWS: Array<Review> = [];
-
-  review_card_count = 2;
-
-  OrbitData!: BagelOrbit;
-
   FOLDER_ROOT = 'https://bodos-assets.s3.amazonaws.com/images/';
 
+  LOCATIONS!: Array<Location>;
   /**
    * A method to retrieve the list of locations from backend
    * @returns
@@ -28,12 +22,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     return this.httpRequest
       .get(this.httpRequest.getPHPBaseURL() + 'locations/all-locations.php')
       .subscribe((locationData) => {
-        for (let location of locationData as Location[]) {
-          this.LOCATIONS.push(JSON.parse(JSON.stringify(location)));
-        }
+        this.LOCATIONS = locationData;
       });
   }
 
+  OrbitData!: BagelOrbit;
   /**
    * A method to retrieve the bagel orbit data from backend
    * @returns
@@ -46,6 +39,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       });
   }
 
+  REVIEWS!: Array<Review>;
+  review_card_count = 2;
   /**
    * A method to retrieve the list of reviews from backend
    * @returns
@@ -55,14 +50,12 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       .get(this.httpRequest.getPHPBaseURL() + 'reviews/all-reviews.php')
       .subscribe((reviewData) => {
         this.review_card_count *= reviewData.length;
-        for (let review of reviewData as Review[]) {
-          this.REVIEWS.push(JSON.parse(JSON.stringify(review)));
-        }
+        this.REVIEWS = reviewData;
       });
   }
 
   positionReviews() {
-    let marqueeDiv: HTMLElement = document.getElementById(
+    let marqueeDiv = document.getElementById(
         'reviews-marquee-1'
       ) as HTMLElement,
       marqueeHeight = parseFloat(window.getComputedStyle(marqueeDiv).height);
@@ -80,12 +73,9 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     window.scrollTo(0, 0);
   }
 
-  reviewsObserver: IntersectionObserver = new IntersectionObserver(
-    (entries, reviewsObserver) => {
-      this.positionReviews();
-    },
-    {}
-  );
+  reviewsObserver = new IntersectionObserver((entries, reviewsObserver) => {
+    this.positionReviews();
+  }, {});
 
   constructor(private httpRequest: HTTPRequestService) {}
 
