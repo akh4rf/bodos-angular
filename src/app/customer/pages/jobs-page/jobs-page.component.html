@@ -1,26 +1,18 @@
-<div class="jobs-page">
-  <div>
-    <div class="jobs-title-section">
-      <h1>Current Jobs</h1>
-      <hr />
+<div id="jobs-page">
+  <div id="jobs-intro">
+    <img
+      src="https://bodos-assets.s3.amazonaws.com/images/line-waiting.jpeg"
+      alt=""
+    />
+    <div class="img-overlay">
+      <div>We're Hiring!</div>
     </div>
   </div>
-  <div class="location-section">
-    <div *ngFor="let location of LOCATIONS" style="height: 100%">
-      <div class="jobs-location-wrapper">
-        <img
-          src="{{ location.img }}"
-          alt="A photo of the {{ location.name }} location"
-          class="location-img"
-        />
-        <h2 style="margin-top: 15px">{{ location.name }}</h2>
-        <hr />
-        <ul class="jobs-list">
-          <li>Baker Maker</li>
-          <li>Dishwasher</li>
-          <li>Evening Cook</li>
-        </ul>
-      </div>
-    </div>
+  <div id="jobs-title">
+    <div>Current Jobs</div>
+    <hr />
+  </div>
+  <div id="jobs-list">
+    <a class="job-link" *ngFor="let job of JOBS" href="">{{ job }}</a>
   </div>
 </div>
