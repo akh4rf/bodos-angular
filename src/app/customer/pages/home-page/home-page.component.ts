@@ -56,21 +56,14 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
   positionReviews() {
     let marqueeDiv = document.getElementById(
-        'reviews-marquee-1'
-      ) as HTMLElement,
-      marqueeHeight = parseFloat(window.getComputedStyle(marqueeDiv).height);
-    marqueeDiv.style.top = marqueeHeight / -2 + 'px';
-  }
-
-  /**
-   * Workaround to buy the review marquee to have time to load into DOM and reposition
-   * Credit: https://stackoverflow.com/a/47988441
-   */
-  scrollToTop() {
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+      'reviews-marquee-1'
+    ) as HTMLElement;
+    if (marqueeDiv) {
+      let marqueeHeight = parseFloat(
+        window.getComputedStyle(marqueeDiv).height
+      );
+      marqueeDiv.style.top = marqueeHeight / -2 + 'px';
     }
-    window.scrollTo(0, 0);
   }
 
   reviewsObserver = new IntersectionObserver((entries, reviewsObserver) => {
@@ -80,7 +73,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   constructor(private httpRequest: HTTPRequestService) {}
 
   ngOnInit(): void {
-    this.scrollToTop();
     this.getLocations();
     this.getReviews();
     this.getBagelOrbitData();

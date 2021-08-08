@@ -12,7 +12,13 @@
     <div>Current Jobs</div>
     <hr />
   </div>
-  <div id="jobs-list">
-    <a class="job-link" *ngFor="let job of JOBS" href="">{{ job }}</a>
+  <div>
+    <div id="jobs-list" *ngIf="JOBS.length > 0; else no_jobs">
+      <a class="job-link" *ngFor="let job of JOBS" href="">{{ job }}</a>
+    </div>
+
+    <ng-template #no_jobs>
+      <div id="jobs-list">No jobs available, check back later!</div>
+    </ng-template>
   </div>
 </div>

@@ -13,7 +13,7 @@ export class HTTPRequestService {
     ) {
       return 'http://localhost:80/';
     } else {
-      return 'https://austinhouck.com/projects/bodos-php/';
+      return 'https://bodos-php.herokuapp.com/';
     }
   }
 

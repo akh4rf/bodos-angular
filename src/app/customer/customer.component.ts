@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { HTTPRequestService } from '../shared/services/http-request.service';
 
 @Component({
@@ -44,10 +44,25 @@ export class CustomerComponent implements OnInit {
     }
   }
 
-  constructor(
-    private httpRequest: HTTPRequestService,
-    private router: Router
-  ) {}
+  /**
+   * Workaround to buy the review marquee to have time to load into DOM and reposition
+   * Credit: https://stackoverflow.com/a/47988441
+   */
+  scrollToTop() {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }
+
+  constructor(private httpRequest: HTTPRequestService, private router: Router) {
+    // Scroll to top when route changes
+    this.router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        this.scrollToTop();
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.getNavigationData();
