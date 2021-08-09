@@ -29,6 +29,7 @@ export class CustomerComponent implements OnInit {
   getNavStyle() {
     switch (this.router.url) {
       case '/':
+      case '/our-story':
         return { position: 'absolute' };
       default:
         return { position: 'relative', background: 'var(--primary)' };
