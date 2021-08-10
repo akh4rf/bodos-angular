@@ -1,6 +1,6 @@
 <nav (window:resize)="onResize()" class="navbar-wrapper" *ngIf="NAVIGATION">
-  <div class="navbar-section navbar-left">
-    <div>
+  <div class="navbar-section">
+    <div style="justify-content: flex-start">
       <bodos-logo
         [style]="NAVIGATION.logo.styles"
         [height]="NAVIGATION.logo.height"
@@ -22,8 +22,8 @@
       </navbar-link>
     </div>
   </div>
-  <div class="navbar-section navbar-right">
-    <div class="navbar-links">
+  <div class="navbar-section">
+    <div class="navbar-links" style="justify-content: flex-end">
       <a
         *ngFor="let button of NAVIGATION.buttons"
         class="bb-btn {{ button.colorClass }}"
