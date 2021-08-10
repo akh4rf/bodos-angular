@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2vw;
+  padding: 25px;
   background: var(--primary);
   color: white;
   padding-top: calc(60px + 7vh);
@@ -19,7 +19,7 @@
 #intro-text {
   margin-right: 5%;
   z-index: 3;
-  font-size: calc(36px + 0.5vw);
+  font-size: calc(28px + 1vw);
   order: 1;
 }
 
@@ -51,7 +51,7 @@
 /****************************/
 
 #timeline-section {
-  padding: 0 2vw 2vw;
+  padding: 25px;
   background: hsl(213, 54%, 33%);
   color: white;
 }
@@ -65,7 +65,7 @@
 
 #timeline-title {
   font-size: calc(36px + 0.5vw);
-  padding: 25px 5px;
+  padding: 0 5px 25px;
 }
 
 #timeline-title > hr {
@@ -145,6 +145,7 @@
   color: #777777;
   font-size: calc(16px + 0.2vw);
   padding: 2vw;
+  border-radius: 10px;
 }
 
 .date {
