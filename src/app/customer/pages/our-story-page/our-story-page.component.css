@@ -17,10 +17,9 @@
 }
 
 #intro-text {
-  width: 50%;
   margin-right: 5%;
   z-index: 3;
-  font-size: calc(18px + 2vw);
+  font-size: calc(36px + 0.5vw);
   order: 1;
 }
 
@@ -40,9 +39,119 @@
 
 .divider-bar {
   height: 2px;
+  margin: 25px auto;
   background: white;
   border-radius: 9999px;
   border: none;
+  width: 20%;
+}
+
+/****************************/
+/***** Timeline Section *****/
+/****************************/
+
+#timeline-section {
+  padding: 0 2vw 2vw;
+  background: hsl(213, 54%, 33%);
+  color: white;
+}
+
+#timeline-section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#timeline-title {
+  font-size: calc(36px + 0.5vw);
+  padding: 25px 5px;
+}
+
+#timeline-title > hr {
+  margin: 10px auto;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: auto calc(50px + 2%) auto;
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.tr-left,
+.tr-right {
+  display: flex;
+  align-items: center;
+}
+
+.tr-left {
+  justify-content: flex-end;
+}
+
+.tr-middle {
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+.tr-middle > div {
+  width: 6px;
+  height: 100%;
+  margin-left: calc(50% - 3px);
+  background: white;
+}
+
+.rounded-top {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.rounded-bottom {
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.tr-right {
+  justify-content: flex-start;
+}
+
+[class^="tr"] > span {
+  height: calc(16px + 1vw);
+  width: calc(16px + 1vw);
+  background: white;
+}
+
+.tr-left > span {
+  clip-path: polygon(0 0, 0 100%, 87% 50%);
+}
+
+.tr-left > div {
+  transform: translateX(1px);
+}
+
+.tr-right > span {
+  clip-path: polygon(100% 0, 100% 100%, 13% 50%);
+}
+
+.tr-right > div {
+  transform: translateX(-1px);
+}
+
+.timeline-box {
+  background-color: white;
+  color: #777777;
+  font-size: calc(16px + 0.2vw);
+  padding: 2vw;
+}
+
+.date {
+  font-size: calc(24px + 0.25vw);
+  color: black;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 900px) {
@@ -57,7 +166,8 @@
   #intro-text {
     order: 3;
     text-align: center;
-    margin: 25px 0 0;
+    padding: 25px 5px;
+    margin: 0;
   }
 
   #intro-text hr {
