@@ -15,15 +15,7 @@ export class CustomerComponent implements OnInit {
       .get('assets/data/navigationData.json')
       .subscribe((data) => {
         this.NavData = data;
-        resetNavLinks(this.NavData.navbar.links, this.router.url);
       });
-  }
-
-  /**
-   * Detects when footer link has been clicked, updates active link in navbar accordingly
-   */
-  handleFooterEmit(PATH: string) {
-    resetNavLinks(this.NavData.navbar.links, PATH);
   }
 
   getNavStyle() {
@@ -80,9 +72,3 @@ export class CustomerComponent implements OnInit {
     }
   }
 }
-
-export const resetNavLinks = (linkList: any[], PATH: string) => {
-  for (let link of linkList) {
-    link['isActive'] = PATH == link['href'];
-  }
-};

@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavbarLinkComponent implements OnInit {
   @Input() link!: string;
-  @Input() isActive!: boolean;
   @Input() type!: string;
 
   constructor() {}

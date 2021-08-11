@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { resetNavLinks } from '../../customer.component';
 
 @Component({
   selector: 'bodos-navbar',
@@ -62,8 +61,6 @@ export class BodosNavbarComponent implements OnInit {
   }
 
   handleLinkClick() {
-    // Reset active link
-    resetNavLinks(this.NAVIGATION.links, this.router.url);
     // Collapse dropdown
     this.collapseDropdown();
   }
