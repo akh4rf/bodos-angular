@@ -1,0 +1,32 @@
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+  "
+>
+  <img
+    src="https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png"
+    alt=""
+    style="
+      height: calc(250px + 4vw);
+      -webkit-animation: spin-right 30s infinite;
+      animation: spin-right 30s linear infinite;
+    "
+  />
+  <div>
+    <h1 style="font-size: calc(36px + 2vw)">Whoops! You took a wrong turn!</h1>
+    <p style="font-size: calc(18px + 1vw); margin: 25px 0">
+      Not to worry! Click below to return to the homepage!
+    </p>
+    <a
+      class="bb-btn secondary"
+      style="font-size: calc(24px + 0.25vw); line-height: 1.5"
+      routerLink="/"
+    >
+      Return Home <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</div>

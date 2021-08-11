@@ -8,6 +8,7 @@ import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { MerchPageComponent } from './pages/merch-page/merch-page.component';
 import { OurStoryPageComponent } from './pages/our-story-page/our-story-page.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'contact-us',
         component: ContactPageComponent,
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent,
       },
     ],
   },

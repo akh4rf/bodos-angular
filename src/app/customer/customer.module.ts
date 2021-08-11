@@ -19,6 +19,7 @@ import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { GiftCardsPageComponent } from './pages/gift-cards-page/gift-cards-page.component';
 import { MerchPageComponent } from './pages/merch-page/merch-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     GiftCardsPageComponent,
     MerchPageComponent,
     ContactPageComponent,
+    PageNotFoundComponent,
   ],
   imports: [CommonModule, CustomerRoutingModule, SharedModule],
 })
