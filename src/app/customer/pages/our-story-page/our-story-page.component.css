@@ -72,7 +72,13 @@
   margin: 10px auto;
 }
 
-.timeline-row {
+.timeline-row-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-row-inner {
   display: grid;
   grid-template-columns: auto calc(50px + 2%) auto;
   width: 100%;
