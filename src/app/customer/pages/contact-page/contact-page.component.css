@@ -1,0 +1,49 @@
+input,
+textarea {
+  margin-top: 10px;
+  width: 100%;
+  font-size: calc(16px + 0.25vw);
+  padding: 0.5em;
+  font-family: inherit;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0.1vw;
+}
+
+input:focus,
+textarea:focus {
+  outline-style: none;
+}
+
+label {
+  font-size: calc(24px + 0.25vw);
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: calc(24px + 0.25vw);
+  line-height: 1.5;
+  border: none;
+  margin-top: 10px;
+}
+
+.flex-all-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.disabled {
+  background: hsl(0, 0%, 70%);
+  cursor: default;
+}
+
+.disabled:hover {
+  background: hsl(0, 0%, 70%);
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}

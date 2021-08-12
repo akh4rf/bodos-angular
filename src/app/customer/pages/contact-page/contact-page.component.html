@@ -1,0 +1,75 @@
+<div class="flex-all-center" style="padding: 25px">
+  <h1 style="font-size: calc(36px + 2vw); margin-bottom: 25px">Contact Us!</h1>
+  <div>
+    <form
+      name="contactForm"
+      #contactForm="ngForm"
+      (ngSubmit)="contactForm.valid && handleSubmit()"
+      class="flex-all-center"
+      style="gap: 25px"
+    >
+      <div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 5%;
+          "
+        >
+          <div>
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              [(ngModel)]="form.name"
+              #name="ngModel"
+              autofocus
+            />
+            <div class="error" *ngIf="name.touched && name.invalid">
+              Please enter your name.
+            </div>
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              required
+              [(ngModel)]="form.email"
+              #email="ngModel"
+            />
+            <div class="error" *ngIf="email.touched && email.invalid">
+              Please enter a valid email.
+            </div>
+          </div>
+          <div style="grid-column-start: 1; grid-column-end: 3">
+            <label for="message">Message</label>
+            <div>
+              <textarea
+                id="message"
+                name="message"
+                required
+                cols="30"
+                rows="10"
+                [(ngModel)]="form.message"
+                #message="ngModel"
+              ></textarea>
+              <div class="error" *ngIf="message.touched && message.invalid">
+                Please enter a message.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="bb-btn secondary" [class.disabled]="contactForm.invalid">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

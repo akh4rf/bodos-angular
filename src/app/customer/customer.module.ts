@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerComponent } from './customer.component';
@@ -40,6 +41,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     ContactPageComponent,
     PageNotFoundComponent,
   ],
-  imports: [CommonModule, CustomerRoutingModule, SharedModule],
+  imports: [CommonModule, CustomerRoutingModule, SharedModule, FormsModule],
 })
 export class CustomerModule {}
