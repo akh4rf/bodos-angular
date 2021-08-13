@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HTTPRequestService } from 'src/app/shared/services/http-request.service';
 
 @Component({
   selector: 'contact-page',
@@ -9,10 +10,17 @@ export class ContactPageComponent implements OnInit {
   form: FormData = new FormData();
 
   handleSubmit() {
-    console.log(this.form);
+    this.http
+      .post(
+        this.http.getPHPBaseURL() + 'contact/process-form.php',
+        JSON.stringify(this.form)
+      )
+      .subscribe((result) => {
+        console.log(result);
+      });
   }
 
-  constructor() {}
+  constructor(private http: HTTPRequestService) {}
 
   ngOnInit(): void {}
 }
