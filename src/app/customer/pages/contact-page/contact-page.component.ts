@@ -8,15 +8,27 @@ import { HTTPRequestService } from 'src/app/shared/services/http-request.service
 })
 export class ContactPageComponent implements OnInit {
   form: FormData = new FormData();
+  submitted = false;
+  error = false;
+  loading = false;
 
   handleSubmit() {
+    // Turn on loading animation
+    this.loading = true;
+    // Post data to DB
     this.http
       .post(
         this.http.getPHPBaseURL() + 'contact/process-form.php',
         JSON.stringify(this.form)
       )
       .subscribe((result) => {
-        console.log(result);
+        if (result['Message'] == 'Successfully submitted contact info!') {
+          this.submitted = true;
+        } else {
+          this.error = true;
+        }
+        // Turn off loading animation
+        this.loading = false;
       });
   }
 

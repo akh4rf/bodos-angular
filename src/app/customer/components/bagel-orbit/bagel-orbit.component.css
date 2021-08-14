@@ -5,23 +5,3 @@
 .orbit > img {
   position: absolute;
 }
-
-/* Credit for orbit animation: https://codepen.io/rss/pen/EWobGz */
-@-webkit-keyframes spin-right {
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes spin-right {
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}

@@ -1,6 +1,32 @@
 <div class="flex-all-center" style="padding: 25px">
   <h1 style="font-size: calc(36px + 2vw); margin-bottom: 25px">Contact Us!</h1>
-  <div>
+  <div
+    *ngIf="submitted && !loading"
+    style="color: green; font-size: calc(24px + 0.25vw)"
+  >
+    Thanks for reaching out!
+  </div>
+  <div
+    *ngIf="error && !loading"
+    style="color: red; font-size: calc(24px + 0.25vw)"
+  >
+    Error submitting form! Please try again later!
+  </div>
+
+  <div *ngIf="loading" style="text-align: center">
+    <img
+      src="https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png"
+      alt=""
+      style="
+        height: calc(150px + 2vw);
+        -webkit-animation: spin-right 15s infinite;
+        animation: spin-right 15s linear infinite;
+      "
+    />
+    <h2 style="font-size: calc(18px + 1vw); margin-top: 25px">Loading...</h2>
+  </div>
+
+  <div *ngIf="!submitted && !error && !loading">
     <form
       name="contactForm"
       #contactForm="ngForm"
