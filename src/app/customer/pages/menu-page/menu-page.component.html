@@ -1,0 +1,4 @@
+<ul *ngFor="let section of MENU | keyvalue">
+  <h1>{{ section.key }}</h1>
+  <li *ngFor="let item of section.value.items">{{ item.name }}</li>
+</ul>
