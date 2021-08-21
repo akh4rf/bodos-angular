@@ -1,0 +1,60 @@
+.menu-page {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-page > div {
+  width: 100%;
+  padding: 25px;
+  background: rgb(15, 53, 98);
+  background: linear-gradient(
+    180deg,
+    var(--primary) 0%,
+    hsl(213, 68%, 50%) 100%
+  );
+}
+
+.menu-wrapper {
+  display: flex;
+  border-radius: 25px;
+  padding: 10px;
+  background: white;
+}
+
+.menu-section {
+  text-align: center;
+}
+
+.menu-column {
+  width: 50%;
+  padding: 10px;
+}
+
+.menu-item-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.menu-item {
+  line-height: 1.5;
+  font-size: calc(16px + 0.5vw);
+}
+
+.price-section > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-price {
+  margin-left: 25px;
+  text-align: right;
+}
+
+.item-desc {
+  text-align: left;
+  font-size: calc(12px + 0.25vw);
+  color: gray;
+  padding: 10px;
+}
