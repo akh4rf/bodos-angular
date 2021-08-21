@@ -1,44 +1,44 @@
 {
   "bagels": [
     {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/CinnamonRaisin.png",
+      "alt_text": "A Cinnamon-Raisin Bagel"
+    },
+    {
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/Everything.png",
+      "alt_text": "An Everything Bagel"
+    },
+    {
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/EverythingWholeWheat.png",
+      "alt_text": "An Everything on 100% Whole Wheat Bagel"
+    },
+    {
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/Garlic.png",
+      "alt_text": "A Garlic Bagel"
+    },
+    {
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/Onion.png",
+      "alt_text": "An Onion Bagel"
+    },
+    {
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/Plain.png",
       "alt_text": "A Plain Bagel"
     },
     {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/Poppy.png",
+      "alt_text": "A Poppy Bagel"
     },
     {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/Salt.png",
+      "alt_text": "A Salt Bagel"
     },
     {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/Sesame.png",
+      "alt_text": "A Sesame Bagel"
     },
     {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
-    },
-    {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
-    },
-    {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
-    },
-    {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
-    },
-    {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
-    },
-    {
-      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/bagel.png",
-      "alt_text": "A Plain Bagel"
+      "img": "https://bodos-assets.s3.amazonaws.com/images/food/bagels/WholeWheat.png",
+      "alt_text": "A 100% Whole Wheat Bagel"
     }
   ]
 }
