@@ -304,7 +304,7 @@ export class MenuPageComponent implements OnInit {
           name: 'Lox and Cream Cheese',
           type: 'Cream Cheese',
           img: '',
-          sizes: { bagel: 5.6 },
+          sizes: { bagel: 5.6, eight_oz_tub: null },
         },
       ],
     },
@@ -383,47 +383,6 @@ export class MenuPageComponent implements OnInit {
           sizes: { small: 1.2, medium: 1.45, large: 1.65 },
         },
         {
-          name: 'Flavored Seltzers',
-          type: 'Beverage',
-          img: '',
-          desc: '(Our own flavors, made with all-natural fruit extracts and a hint of sweetness, in Lemon, Raspberry, Tangerine, or Pomegranate)',
-          sizes: { large: 1.45 },
-        },
-        {
-          name: 'Coffee',
-          type: 'Beverage',
-          img: '',
-          desc: '(regular or decaf)',
-          sizes: { medium: 2.0, large: 2.4 },
-        },
-        {
-          name: 'Coffee by the Box',
-          type: 'Beverage',
-          img: '',
-          desc: '160 ounces, includes cups, creamers etc.',
-          price: 25.0,
-        },
-        {
-          name: 'Hot Tea',
-          type: 'Beverage',
-          img: '',
-          desc: '(black or green)',
-          sizes: { large: 1.45 },
-        },
-        {
-          name: 'Iced Tea',
-          type: 'Beverage',
-          img: '',
-          sizes: { medium: 1.6, large: 1.8 },
-        },
-        {
-          name: 'Milk',
-          type: 'Beverage',
-          img: '',
-          desc: '(whole, 2%, nonfat, or chocolate)',
-          price: 1.25,
-        },
-        {
           name: 'Orange Juice',
           type: 'Beverage',
           img: '',
@@ -436,11 +395,52 @@ export class MenuPageComponent implements OnInit {
           sizes: { small: 1.45, medium: 1.75, large: 2.3 },
         },
         {
+          name: 'Coffee',
+          type: 'Beverage',
+          img: '',
+          desc: '(regular or decaf)',
+          sizes: { medium: 2.0, large: 2.4 },
+        },
+        {
+          name: 'Iced Tea',
+          type: 'Beverage',
+          img: '',
+          sizes: { medium: 1.6, large: 1.8 },
+        },
+        {
+          name: 'Hot Tea',
+          type: 'Beverage',
+          img: '',
+          desc: '(black or green)',
+          sizes: { large: 1.45 },
+        },
+        {
+          name: 'Flavored Seltzers',
+          type: 'Beverage',
+          img: '',
+          desc: '(Our own flavors, made with all-natural fruit extracts and a hint of sweetness, in Lemon, Raspberry, Tangerine, or Pomegranate)',
+          sizes: { large: 1.45 },
+        },
+        {
           name: 'Bottled Water',
           type: 'Beverage',
           img: '',
           desc: '(Maine\'s "Poland Spring")',
           price: 0.99,
+        },
+        {
+          name: 'Milk',
+          type: 'Beverage',
+          img: '',
+          desc: '(whole, 2%, nonfat, or chocolate)',
+          price: 1.25,
+        },
+        {
+          name: 'Coffee by the Box',
+          type: 'Beverage',
+          img: '',
+          desc: '160 ounces, includes cups, creamers etc.',
+          price: 25.0,
         },
       ],
     },
@@ -512,6 +512,9 @@ export class MenuPageComponent implements OnInit {
   columns = [0, 1];
 
   resolvePrice(num: any) {
+    if (num == null) {
+      return '';
+    }
     return '$' + Number.parseFloat(num).toFixed(2);
   }
 
