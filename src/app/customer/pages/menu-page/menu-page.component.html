@@ -1,47 +1,57 @@
 <div class="menu-page">
   <div>
     <div class="menu-wrapper">
-      <div *ngFor="let idx of columns" class="menu-column">
-        <div
-          *ngFor="let section of MENU | keyvalue: unsorted; let i = index"
-          class="menu-section"
-        >
+      <h1
+        style="width: 100%; text-align: center; font-size: calc(72px + 0.5vw)"
+      >
+        Menu
+      </h1>
+      <div style="display: flex">
+        <div *ngFor="let idx of columns" class="menu-column">
           <div
-            *ngIf="i % 2 == idx"
-            style="
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-            "
+            *ngFor="let section of MENU | keyvalue: unsorted; let i = index"
+            class="menu-section"
           >
-            <div>
-              <hr class="title-bar" />
-              <h1>{{ keyMap[section.key] }}</h1>
-              <hr class="title-bar" />
-            </div>
-            <ul class="menu-item-section">
-              <li *ngFor="let item of section.value.items" class="menu-item">
-                <div style="display: flex; justify-content: space-between">
-                  <div class="item-name">{{ item.name }}</div>
-                  <div class="price-section">
-                    <div *ngIf="item.price" class="item-price">
-                      {{ resolvePrice(item.price) }}
-                    </div>
-                    <div *ngIf="item.sizes">
-                      <div
-                        *ngFor="let size of item.sizes | keyvalue: unsorted"
-                        class="item-price"
-                        style="min-width: 6ch"
-                      >
-                        {{ resolvePrice(size.value) }}
+            <div
+              *ngIf="i % 2 == idx"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div>
+                <hr class="title-bar" />
+                <h1>{{ keyMap[section.key] }}</h1>
+                <hr class="title-bar" />
+              </div>
+              <div *ngIf="section.value.desc" style="color: gray">
+                {{ section.value.desc }}
+              </div>
+              <ul class="menu-item-section">
+                <li *ngFor="let item of section.value.items" class="menu-item">
+                  <div style="display: flex; justify-content: space-between">
+                    <div class="item-name">{{ item.name }}</div>
+                    <div class="price-section">
+                      <div *ngIf="item.price" class="item-price">
+                        {{ resolvePrice(item.price) }}
+                      </div>
+                      <div *ngIf="item.sizes">
+                        <div
+                          *ngFor="let size of item.sizes | keyvalue: unsorted"
+                          class="item-price"
+                          style="min-width: 6ch"
+                        >
+                          {{ resolvePrice(size.value) }}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="item-desc" *ngIf="item.desc">{{ item.desc }}</div>
-              </li>
-            </ul>
+                  <div class="item-desc" *ngIf="item.desc">{{ item.desc }}</div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

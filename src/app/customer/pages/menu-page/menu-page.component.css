@@ -15,7 +15,6 @@
 }
 
 .menu-wrapper {
-  display: flex;
   border-radius: 25px;
   padding: 10px;
   background: white;
@@ -69,7 +68,7 @@
 }
 
 @media screen and (max-width: 910px) {
-  .menu-wrapper {
+  .menu-wrapper > div {
     flex-direction: column;
   }
 

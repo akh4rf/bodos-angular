@@ -9,6 +9,7 @@ export class MenuPageComponent implements OnInit {
   MENU: Menu = {
     bagels: {
       bulkDiscount: 0.1,
+      desc: 'Our bagels are made fresh throughout the day! Buy a dozen or more and only pay $0.80 per bagel!',
       items: [
         {
           name: 'Plain',
@@ -538,6 +539,7 @@ interface Item {
 
 interface ItemCollection {
   bulkDiscount?: number;
+  desc?: string;
   items: Item[];
 }
 
