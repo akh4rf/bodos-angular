@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RandomBagelService } from '../../services/random-bagel.service';
 
 @Component({
   selector: 'our-story-page',
@@ -21,7 +22,11 @@ export class OurStoryPageComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  randomBagel() {
+    return this.bagelService.getRandomBagel();
+  }
+
+  constructor(private bagelService: RandomBagelService) {}
 
   ngOnInit(): void {}
 }
